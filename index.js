@@ -1,15 +1,12 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/components/footer/footer.js":
-/*!*****************************************!*\
-  !*** ./src/components/footer/footer.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/components/footer/element-footer.js":
+/*!*************************************************!*\
+  !*** ./src/components/footer/element-footer.js ***!
+  \*************************************************/
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_footer.scss */ "./src/components/footer/_footer.scss");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -26,7 +23,6 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 var Footer = /*#__PURE__*/function (_HTMLElement) {
   _inherits(Footer, _HTMLElement);
   var _super = _createSuper(Footer);
@@ -46,10 +42,26 @@ customElements.define('footer-component', Footer);
 
 /***/ }),
 
-/***/ "./src/components/front-books/_front-books.js":
-/*!****************************************************!*\
-  !*** ./src/components/front-books/_front-books.js ***!
-  \****************************************************/
+/***/ "./src/components/footer/footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/footer/footer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.scss */ "./src/components/footer/footer.scss");
+/* harmony import */ var _element_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-footer */ "./src/components/footer/element-footer.js");
+/* harmony import */ var _element_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_element_footer__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./src/components/front-books/element-front-books.js":
+/*!***********************************************************!*\
+  !*** ./src/components/front-books/element-front-books.js ***!
+  \***********************************************************/
 /***/ (() => {
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -78,7 +90,8 @@ var FrontBooks = /*#__PURE__*/function (_HTMLElement) {
   _createClass(FrontBooks, [{
     key: "connectedCallback",
     value: function connectedCallback() {
-      this.innerHTML = "\n    <div class=\"front-books\" id=\"front-books\">\n      <nav class=\"nav container\" id=\"main-nav\"></nav>\n\n      <h1>\u041C\u043E\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430 frontend \u043A\u043D\u0438\u0433</h1>\n\n      <section class=\"col2 container\">\n        <aside class=\"aside\"></aside>\n        <main class=\"content books\">\n          <h2></h2>\n          <ol id=\"books\"></ol>\n        </main>\n      </section>\n    </div>\n    ";
+      this.innerHTML = "\n    <h1>\u041C\u043E\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430 frontend \u043A\u043D\u0438\u0433</h1>\n    ";
+      this.className = 'front-books';
     }
   }]);
   return FrontBooks;
@@ -87,64 +100,39 @@ customElements.define('front-books', FrontBooks);
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/create-data.js":
-/*!******************************************************!*\
-  !*** ./src/components/front-books/js/create-data.js ***!
-  \******************************************************/
+/***/ "./src/components/front-books/front-books.js":
+/*!***************************************************!*\
+  !*** ./src/components/front-books/front-books.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooks": () => (/* binding */ dataBooks),
-/* harmony export */   "learnedBooks": () => (/* binding */ learnedBooks)
+/* harmony export */   showFrontBooks: () => (/* binding */ showFrontBooks)
 /* harmony export */ });
-/* harmony import */ var _data_books_data_books_base_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-books/data-books-base.js */ "./src/components/front-books/js/data-books/data-books-base.js");
-/* harmony import */ var _data_books_data_books_base_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data-books/data-books-base-en.js */ "./src/components/front-books/js/data-books/data-books-base-en.js");
-/* harmony import */ var _data_books_data_books_htmlcss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data-books/data-books-htmlcss.js */ "./src/components/front-books/js/data-books/data-books-htmlcss.js");
-/* harmony import */ var _data_books_data_books_htmlcss_en_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data-books/data-books-htmlcss-en.js */ "./src/components/front-books/js/data-books/data-books-htmlcss-en.js");
-/* harmony import */ var _data_books_data_books_bootstrap_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data-books/data-books-bootstrap.js */ "./src/components/front-books/js/data-books/data-books-bootstrap.js");
-/* harmony import */ var _data_books_data_books_bootstrap_en_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data-books/data-books-bootstrap-en.js */ "./src/components/front-books/js/data-books/data-books-bootstrap-en.js");
-/* harmony import */ var _data_books_data_books_js_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data-books/data-books-js.js */ "./src/components/front-books/js/data-books/data-books-js.js");
-/* harmony import */ var _data_books_data_books_js_en_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./data-books/data-books-js-en.js */ "./src/components/front-books/js/data-books/data-books-js-en.js");
-/* harmony import */ var _data_books_data_books_jquery_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./data-books/data-books-jquery.js */ "./src/components/front-books/js/data-books/data-books-jquery.js");
-/* harmony import */ var _data_books_data_books_jquery_en_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./data-books/data-books-jquery-en.js */ "./src/components/front-books/js/data-books/data-books-jquery-en.js");
-/* harmony import */ var _data_books_data_books_ts_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./data-books/data-books-ts.js */ "./src/components/front-books/js/data-books/data-books-ts.js");
-/* harmony import */ var _data_books_data_books_ts_en_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./data-books/data-books-ts-en.js */ "./src/components/front-books/js/data-books/data-books-ts-en.js");
-/* harmony import */ var _data_books_data_books_angular_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./data-books/data-books-angular.js */ "./src/components/front-books/js/data-books/data-books-angular.js");
-/* harmony import */ var _data_books_data_books_angular_en_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./data-books/data-books-angular-en.js */ "./src/components/front-books/js/data-books/data-books-angular-en.js");
-/* harmony import */ var _data_books_data_books_react_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./data-books/data-books-react.js */ "./src/components/front-books/js/data-books/data-books-react.js");
-/* harmony import */ var _data_books_data_books_react_en_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./data-books/data-books-react-en.js */ "./src/components/front-books/js/data-books/data-books-react-en.js");
-/* harmony import */ var _data_books_data_books_vue_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data-books/data-books-vue.js */ "./src/components/front-books/js/data-books/data-books-vue.js");
-/* harmony import */ var _data_books_data_books_vue_en_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data-books/data-books-vue-en.js */ "./src/components/front-books/js/data-books/data-books-vue-en.js");
-/* harmony import */ var _data_books_data_books_node_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data-books/data-books-node.js */ "./src/components/front-books/js/data-books/data-books-node.js");
-/* harmony import */ var _data_books_data_books_node_en_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./data-books/data-books-node-en.js */ "./src/components/front-books/js/data-books/data-books-node-en.js");
-/* harmony import */ var _data_books_data_books_web_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./data-books/data-books-web.js */ "./src/components/front-books/js/data-books/data-books-web.js");
-/* harmony import */ var _data_books_data_books_web_en_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./data-books/data-books-web-en.js */ "./src/components/front-books/js/data-books/data-books-web-en.js");
-/* harmony import */ var _data_books_data_books_php_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./data-books/data-books-php.js */ "./src/components/front-books/js/data-books/data-books-php.js");
-/* harmony import */ var _data_books_data_books_php_en_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./data-books/data-books-php-en.js */ "./src/components/front-books/js/data-books/data-books-php-en.js");
-/* harmony import */ var _data_books_data_books_python_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./data-books/data-books-python.js */ "./src/components/front-books/js/data-books/data-books-python.js");
-/* harmony import */ var _data_books_data_books_python_en_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./data-books/data-books-python-en.js */ "./src/components/front-books/js/data-books/data-books-python-en.js");
-var _ref;
-/*****************
-Функция createData возвращает объект dataBooks и массив learnedBooks
-*****************/
+/* harmony import */ var _element_front_books__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./element-front-books */ "./src/components/front-books/element-front-books.js");
+/* harmony import */ var _element_front_books__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_element_front_books__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_f_create_input_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/f-create-input.js */ "./src/components/front-books/js/f-create-input.js");
+/* harmony import */ var _js_f_create_category_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/f-create-category.js */ "./src/components/front-books/js/f-create-category.js");
+/* harmony import */ var _js_f_create_elements_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/f-create-elements.js */ "./src/components/front-books/js/f-create-elements.js");
+/* harmony import */ var _js_f_create_elem_main_nav_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/f-create-elem-main-nav.js */ "./src/components/front-books/js/f-create-elem-main-nav.js");
+/* harmony import */ var _js_f_create_elem_section_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/f-create-elem-section.js */ "./src/components/front-books/js/f-create-elem-section.js");
+/****************
+Скрипт из файла front-books.js
+Функция showFrontBooks показывает страницу front-books
+*******************/
 /*
 Алгоритм работы
-1. Импортируем массивы из файлов data-books.js...
-2. Создаем массив dataArray для импортированных массивов
-3. Создаем массив с книгами dataArrayBooks из массива dataArray
-4. Создаем объект result
-5. Создаем массив resultLearned
-6. Проходим по массиву dataArrayBooks
-7. Создаем массив category
-8. Создаем массив theme для каждого элемента массива category
-9. Создаем массив книг для каждого элемента массива theme
-10. Если книга имеет свойство learned === true, то добавляем ее в массив resultLearned
-11. Возвращаем объект dataBooks и массив learnedBooks
+1. Создаем объект frontBooks
+2. В объекте frontBooks создаем свойство input
+3. В объекте frontBooks создаем свойство category
+4. В объекте frontBooks создаем свойство elements
+5. В объекте frontBooks создаем свойство mainNav
+6. В объекте frontBooks создаем свойство elemSection
+7. Экспортируем функцию showFrontBooks()
 */
 
-//1. Импортируем массивы из файлов data-books.js...
 
 
 
@@ -152,205 +140,46 @@ var _ref;
 
 
 
+//1. Создаем объект frontBooks
+var frontBooks = {};
 
+//2. В объекте frontBooks создаем свойство input
+frontBooks.input = (0,_js_f_create_input_js__WEBPACK_IMPORTED_MODULE_1__.createInput)();
 
+//3. В объекте frontBooks создаем свойство category
+frontBooks.category = (0,_js_f_create_category_js__WEBPACK_IMPORTED_MODULE_2__.createCategory)(frontBooks.input);
 
+//4. В объекте frontBooks создаем свойство elements
+frontBooks.elements = (0,_js_f_create_elements_js__WEBPACK_IMPORTED_MODULE_3__.createElements)(frontBooks.category);
 
+//5. В объекте frontBooks создаем свойство mainNav
+frontBooks.mainNav = (0,_js_f_create_elem_main_nav_js__WEBPACK_IMPORTED_MODULE_4__.createElemMainNav)(frontBooks.elements);
 
+//6. В объекте frontBooks создаем свойство elementSection
+frontBooks.elemSection = (0,_js_f_create_elem_section_js__WEBPACK_IMPORTED_MODULE_5__.createElemSection)(frontBooks.elements);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//2. Создаем массив dataArray для импортированных массивов
-var dataArray = [_data_books_data_books_base_js__WEBPACK_IMPORTED_MODULE_0__.dataBooksBase, _data_books_data_books_base_en_js__WEBPACK_IMPORTED_MODULE_1__.dataBooksBaseEn, _data_books_data_books_htmlcss_js__WEBPACK_IMPORTED_MODULE_2__.dataBooksHtmlcss, _data_books_data_books_htmlcss_en_js__WEBPACK_IMPORTED_MODULE_3__.dataBooksHtmlcssEn, _data_books_data_books_bootstrap_js__WEBPACK_IMPORTED_MODULE_4__.dataBooksBootstrap, _data_books_data_books_bootstrap_en_js__WEBPACK_IMPORTED_MODULE_5__.dataBooksBootstrapEn, _data_books_data_books_js_js__WEBPACK_IMPORTED_MODULE_6__.dataBooksJs, _data_books_data_books_js_en_js__WEBPACK_IMPORTED_MODULE_7__.dataBooksJsEn, _data_books_data_books_jquery_js__WEBPACK_IMPORTED_MODULE_8__.dataBooksJquery, _data_books_data_books_jquery_en_js__WEBPACK_IMPORTED_MODULE_9__.dataBooksJqueryEn, _data_books_data_books_ts_js__WEBPACK_IMPORTED_MODULE_10__.dataBooksTs, _data_books_data_books_ts_en_js__WEBPACK_IMPORTED_MODULE_11__.dataBooksTsEn, _data_books_data_books_angular_js__WEBPACK_IMPORTED_MODULE_12__.dataBooksAngular, _data_books_data_books_angular_en_js__WEBPACK_IMPORTED_MODULE_13__.dataBooksAngularEn, _data_books_data_books_react_js__WEBPACK_IMPORTED_MODULE_14__.dataBooksReact, _data_books_data_books_react_en_js__WEBPACK_IMPORTED_MODULE_15__.dataBooksReactEn, _data_books_data_books_vue_js__WEBPACK_IMPORTED_MODULE_16__.dataBooksVue, _data_books_data_books_vue_en_js__WEBPACK_IMPORTED_MODULE_17__.dataBooksVueEn, _data_books_data_books_node_js__WEBPACK_IMPORTED_MODULE_18__.dataBooksNode, _data_books_data_books_node_en_js__WEBPACK_IMPORTED_MODULE_19__.dataBooksNodeEn, _data_books_data_books_web_js__WEBPACK_IMPORTED_MODULE_20__.dataBooksWeb, _data_books_data_books_web_en_js__WEBPACK_IMPORTED_MODULE_21__.dataBooksWebEn, _data_books_data_books_php_js__WEBPACK_IMPORTED_MODULE_22__.dataBooksPhp, _data_books_data_books_php_en_js__WEBPACK_IMPORTED_MODULE_23__.dataBooksPhpEn, _data_books_data_books_python_js__WEBPACK_IMPORTED_MODULE_24__.dataBooksPython, _data_books_data_books_python_en_js__WEBPACK_IMPORTED_MODULE_25__.dataBooksPythonEn];
-
-//3. Создаем массив с книгами dataArrayBooks из массива dataArray
-var dataArrayBooks = (_ref = []).concat.apply(_ref, dataArray);
-
-//4. Создаем объект result
-var result = {};
-//5. Создаем массив resultLearned
-var resultLearned = [];
-
-//6. Проходим по массиву dataArrayBooks
-dataArrayBooks.forEach(function (elem) {
-  //7. Создаем массив category
-  if (elem.category && !(elem.category in result)) {
-    result[elem.category] = {};
+//7. Экспортируем функцию showFrontBooks()
+function showFrontBooks() {
+  console.log('frontBooks', frontBooks);
+  var elementFrontBooks = document.querySelector('.front-books');
+  if (elementFrontBooks) {
+    elementFrontBooks.append(frontBooks.mainNav);
+    elementFrontBooks.append(frontBooks.elemSection);
   }
-
-  //8. Создаем массив theme для каждого элемента массива category
-  if (elem.theme && !(elem.theme in result[elem.category])) {
-    result[elem.category][elem.theme] = [];
-  }
-
-  //9. Создаем массив книг для каждого элемента массива theme
-  if (elem.category && elem.theme) {
-    result[elem.category][elem.theme].push(elem);
-  }
-
-  //10. Если книга имеет свойство isLearned === true, то добавляем ее в массив resultLearned
-  if (elem.isLearned === true) {
-    resultLearned.push(elem);
-  }
-});
-var dataBooks = result;
-var learnedBooks = resultLearned;
-
-//11. Возвращаем объект dataBooks и массив learnedBooks
-
-
-/***/ }),
-
-/***/ "./src/components/front-books/js/create-learned-list.js":
-/*!**************************************************************!*\
-  !*** ./src/components/front-books/js/create-learned-list.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createLearnedList": () => (/* binding */ createLearnedList)
-/* harmony export */ });
-/*****************
-Функция createLearnedList возвращает список элементов li с прочитанными книгами для элемента Learned меню
-*****************/
-/*
-Алгоритм работы
-1. Функция createLearnedList принимает массив прочитанных книг
-2. Отсортируем книги по дате прочтения
-3. Создаем массив parentDiv для элементов li списка
-4. Создадим элемент elementLi списка книг
-5. Добавим элемент elementLi в массив parentDiv для элементов li списка
-*/
-
-//1. Функция createLearnedList принимает массив прочитанных книг
-function createLearnedList(data) {
-  //2. Отсортируем книги по дате прочтения
-  data.sort(function (a, b) {
-    //удалить всё, кроме цифр
-    return a.dateLearned.replace(/[^0-9]/gi, '') - b.dateLearned.replace(/[^0-9]/gi, '');
-  });
-
-  //3. Создаем массив parentDiv для элементов li списка
-  var parentDiv = [];
-  var _loop = function _loop(i) {
-    //4. Создадим элемент elementLi списка книг
-    var elementLi = document.createElement('li');
-    elementLi.addEventListener('mouseover', addColor);
-    elementLi.addEventListener('mouseout', removeColor);
-    elementLi.innerHTML = "\n    <span>".concat(data[i].dateLearned, "</span>\n    <div><strong>[").concat(data[i].year, "] ").concat(data[i].title, "</strong></div>\n    <div><em>").concat(data[i].author, "</em></div>\n    <div>").concat(data[i].pages, " \u0441\u0442\u0440</div>\n    <div>\u0418\u0437\u0443\u0447\u0435\u043D\u043E ").concat(data[i].isLearned, "</div>\n    <div>").concat(origin(data[i]), "</div>");
-
-    //5. Добавим элемент elementLi в массив parentDiv для элементов li списка
-    parentDiv.push(elementLi);
-    function origin(book) {
-      if (book.origin) {
-        return "(\n        <strong>".concat(book.origin.title, "</strong>\n        - <em>").concat(book.origin.author, "</em>\n        )");
-      } else {
-        return '';
-      }
-    }
-    function addColor() {
-      elementLi.classList.add('over');
-    }
-    function removeColor() {
-      elementLi.classList.remove('over');
-    }
-  };
-  for (var i = 0; i < data.length; i++) {
-    _loop(i);
-  }
-  return parentDiv;
 }
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/create-list.js":
-/*!******************************************************!*\
-  !*** ./src/components/front-books/js/create-list.js ***!
-  \******************************************************/
+/***/ "./src/components/front-books/js/data/data-books-angular-en.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-angular-en.js ***!
+  \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createList": () => (/* binding */ createList)
-/* harmony export */ });
-/* harmony import */ var _sort_books_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sort-books.js */ "./src/components/front-books/js/sort-books.js");
-/*****************
-Функция createList возвращает список элементов li с книгами для элемента aside меню
-*****************/
-/*
-Алгоритм работы
-1. Функция createList принимает массив книг по одной теме
-2. Отсортируем книги по году, автору и названию
-3. Создаем массив parentDiv для элементов li списка
-4. Создадим элемент elementLi списка книг
-5. Добавим элемент elementLi в массив parentDiv для элементов li списка
-*/
-
-
-
-//1. Функция createList принимает массив книг по одной теме
-function createList(data) {
-  //2. Отсортируем книги по году, автору и названию
-  data = (0,_sort_books_js__WEBPACK_IMPORTED_MODULE_0__.sortBooks)(data);
-
-  //3. Создаем массив parentDiv для элементов li списка
-  var parentDiv = [];
-  var _loop = function _loop(i) {
-    //4. Создадим элемент elementLi списка книг
-    var elementLi = document.createElement('li');
-    elementLi.addEventListener('mouseover', addColor);
-    elementLi.addEventListener('mouseout', removeColor);
-    elementLi.innerHTML = "\n    <strong>[".concat(data[i].year, "] ").concat(data[i].title, "</strong>\n    <div><em>").concat(data[i].author, "</em></div>\n    <div>").concat(data[i].pages, " \u0441\u0442\u0440</div>\n    <div>\u0418\u0437\u0443\u0447\u0435\u043D\u043E ").concat(data[i].isLearned, "</div>\n    <div>").concat(origin(data[i]), "</div>");
-
-    //5. Добавим элемент elementLi в массив parentDiv для элементов li списка
-    parentDiv.push(elementLi);
-    function origin(book) {
-      if (book.origin) {
-        return "(\n        <strong>".concat(book.origin.title, "</strong>\n        - <em>").concat(book.origin.author, "</em>\n        )");
-      } else {
-        return '';
-      }
-    }
-    function addColor() {
-      elementLi.classList.add('over');
-    }
-    function removeColor() {
-      elementLi.classList.remove('over');
-    }
-  };
-  for (var i = 0; i < data.length; i++) {
-    _loop(i);
-  }
-  return parentDiv;
-}
-
-/***/ }),
-
-/***/ "./src/components/front-books/js/data-books/data-books-angular-en.js":
-/*!***************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-angular-en.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksAngularEn": () => (/* binding */ dataBooksAngularEn)
+/* harmony export */   dataBooksAngularEn: () => (/* binding */ dataBooksAngularEn)
 /* harmony export */ });
 var dataBooksAngularEn = [{
   "id": 1,
@@ -756,16 +585,16 @@ var dataBooksAngularEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-angular.js":
-/*!************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-angular.js ***!
-  \************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-angular.js":
+/*!******************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-angular.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksAngular": () => (/* binding */ dataBooksAngular)
+/* harmony export */   dataBooksAngular: () => (/* binding */ dataBooksAngular)
 /* harmony export */ });
 var dataBooksAngular = [{
   "id": 1,
@@ -821,16 +650,16 @@ var dataBooksAngular = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-base-en.js":
-/*!************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-base-en.js ***!
-  \************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-base-en.js":
+/*!******************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-base-en.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksBaseEn": () => (/* binding */ dataBooksBaseEn)
+/* harmony export */   dataBooksBaseEn: () => (/* binding */ dataBooksBaseEn)
 /* harmony export */ });
 var dataBooksBaseEn = [{
   "id": 1,
@@ -866,16 +695,16 @@ var dataBooksBaseEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-base.js":
-/*!*********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-base.js ***!
-  \*********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-base.js":
+/*!***************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-base.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksBase": () => (/* binding */ dataBooksBase)
+/* harmony export */   dataBooksBase: () => (/* binding */ dataBooksBase)
 /* harmony export */ });
 var dataBooksBase = [{
   "id": 1,
@@ -1339,6 +1168,26 @@ var dataBooksBase = [{
   "dateLearned": ""
 }, {
   "id": 47,
+  "year": 2021,
+  "category": "other",
+  "theme": "base",
+  "title": "Разработка интерфейсов. Паттерны проектирования",
+  "author": "Тидвелл",
+  "pages": "558",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 48,
+  "year": 2023,
+  "category": "other",
+  "theme": "base",
+  "title": "Кодер с улицы",
+  "author": "Седат Капаноглу",
+  "pages": "320",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 49,
   "year": 2023,
   "category": "other",
   "theme": "base",
@@ -1351,16 +1200,16 @@ var dataBooksBase = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-bootstrap-en.js":
-/*!*****************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-bootstrap-en.js ***!
-  \*****************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-bootstrap-en.js":
+/*!***********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-bootstrap-en.js ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksBootstrapEn": () => (/* binding */ dataBooksBootstrapEn)
+/* harmony export */   dataBooksBootstrapEn: () => (/* binding */ dataBooksBootstrapEn)
 /* harmony export */ });
 var dataBooksBootstrapEn = [{
   "id": 1,
@@ -1376,16 +1225,16 @@ var dataBooksBootstrapEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-bootstrap.js":
-/*!**************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-bootstrap.js ***!
-  \**************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-bootstrap.js":
+/*!********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-bootstrap.js ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksBootstrap": () => (/* binding */ dataBooksBootstrap)
+/* harmony export */   dataBooksBootstrap: () => (/* binding */ dataBooksBootstrap)
 /* harmony export */ });
 var dataBooksBootstrap = [{
   "id": 1,
@@ -1417,20 +1266,30 @@ var dataBooksBootstrap = [{
   "pages": "314",
   "isLearned": false,
   "dateLearned": ""
+}, {
+  "id": 4,
+  "year": 2021,
+  "category": "library",
+  "theme": "bootstrap",
+  "title": "Bootstrap и CSS-препроцессор Sass",
+  "author": "Прохоренок",
+  "pages": "497",
+  "isLearned": false,
+  "dateLearned": ""
 }, {}];
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-htmlcss-en.js":
-/*!***************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-htmlcss-en.js ***!
-  \***************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-htmlcss-en.js":
+/*!*********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-htmlcss-en.js ***!
+  \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksHtmlcssEn": () => (/* binding */ dataBooksHtmlcssEn)
+/* harmony export */   dataBooksHtmlcssEn: () => (/* binding */ dataBooksHtmlcssEn)
 /* harmony export */ });
 var dataBooksHtmlcssEn = [{
   "id": 1,
@@ -1696,16 +1555,16 @@ var dataBooksHtmlcssEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-htmlcss.js":
-/*!************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-htmlcss.js ***!
-  \************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-htmlcss.js":
+/*!******************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-htmlcss.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksHtmlcss": () => (/* binding */ dataBooksHtmlcss)
+/* harmony export */   dataBooksHtmlcss: () => (/* binding */ dataBooksHtmlcss)
 /* harmony export */ });
 var dataBooksHtmlcss = [{
   "id": 1,
@@ -1740,6 +1599,26 @@ var dataBooksHtmlcss = [{
 }, {
   "id": 1,
   "year": 2010,
+  "category": "other",
+  "theme": "web",
+  "title": "HTML, XHTML и CSS на 100 %",
+  "author": "Квинт",
+  "pages": "384",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 2,
+  "year": 2010,
+  "category": "other",
+  "theme": "web",
+  "title": "Веб-мастеринг на 100 HTML CSS JS PHP",
+  "author": "Пётр Ташков",
+  "pages": "512",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 1,
+  "year": 2010,
   "category": "code",
   "theme": "HTML CSS",
   "title": "CSS. 100 и 1 совет (3-е изд)",
@@ -1758,6 +1637,16 @@ var dataBooksHtmlcss = [{
   "isLearned": false,
   "dateLearned": ""
 }, {
+  "id": 6,
+  "year": 2011,
+  "category": "other",
+  "theme": "web",
+  "title": "HTML скрипты и стили (3е)",
+  "author": "Вадим Дунаев",
+  "pages": "816",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
   "id": 3,
   "year": 2011,
   "category": "code",
@@ -1767,6 +1656,16 @@ var dataBooksHtmlcss = [{
   "pages": "97",
   "isLearned": true,
   "dateLearned": "2021-12-08 ср"
+}, {
+  "id": 7,
+  "year": 2011,
+  "category": "other",
+  "theme": "web",
+  "title": "HTML5, CSS3, Web 2.0. Разработка современных Web-сайтов",
+  "author": "Владимир Дронов",
+  "pages": "416",
+  "isLearned": false,
+  "dateLearned": ""
 }, {
   "id": 4,
   "year": 2011,
@@ -1958,6 +1857,16 @@ var dataBooksHtmlcss = [{
   "isLearned": false,
   "dateLearned": ""
 }, {
+  "id": 14,
+  "year": 2013,
+  "category": "other",
+  "theme": "web",
+  "title": "Веб-мастеринг на 100 HTML CSS JS PHP",
+  "author": "Роман Клименко",
+  "pages": "512",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
   "id": 22,
   "year": 2013,
   "category": "code",
@@ -1977,6 +1886,16 @@ var dataBooksHtmlcss = [{
   "pages": "640",
   "isLearned": true,
   "dateLearned": "2021-09-26 вс"
+}, {
+  "id": 18,
+  "year": 2014,
+  "category": "other",
+  "theme": "web",
+  "title": "HTML5, CSS3 и JavaScript Исчерпывающее руководство (4е)",
+  "author": "Дженнифер Роббинс",
+  "pages": "528",
+  "isLearned": false,
+  "dateLearned": ""
 }, {
   "id": 24,
   "year": 2014,
@@ -2148,6 +2067,16 @@ var dataBooksHtmlcss = [{
   "isLearned": false,
   "dateLearned": ""
 }, {
+  "id": 39,
+  "year": 2018,
+  "category": "code",
+  "theme": "HTML CSS",
+  "title": "WEB и DHTML",
+  "author": "Солодушкин",
+  "pages": "132",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
   "id": 40,
   "year": 2019,
   "category": "code",
@@ -2198,6 +2127,16 @@ var dataBooksHtmlcss = [{
   "isLearned": false,
   "dateLearned": ""
 }, {
+  "id": 43,
+  "year": 2021,
+  "category": "code",
+  "theme": "HTML CSS",
+  "title": "Веб-дизайн для начинающих. HTML, CSS, jаvascript и веб-графика",
+  "author": "Дженнифер Роббинс",
+  "pages": "943",
+  "isLearned": false,
+  "dateLearned": ""
+}, {
   "id": 44,
   "year": 2021,
   "category": "code",
@@ -2221,16 +2160,16 @@ var dataBooksHtmlcss = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-jquery-en.js":
-/*!**************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-jquery-en.js ***!
-  \**************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-jquery-en.js":
+/*!********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-jquery-en.js ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksJqueryEn": () => (/* binding */ dataBooksJqueryEn)
+/* harmony export */   dataBooksJqueryEn: () => (/* binding */ dataBooksJqueryEn)
 /* harmony export */ });
 var dataBooksJqueryEn = [{
   "id": 1,
@@ -2406,16 +2345,16 @@ var dataBooksJqueryEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-jquery.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-jquery.js ***!
-  \***********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-jquery.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-jquery.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksJquery": () => (/* binding */ dataBooksJquery)
+/* harmony export */   dataBooksJquery: () => (/* binding */ dataBooksJquery)
 /* harmony export */ });
 var dataBooksJquery = [{
   "id": 1,
@@ -2571,16 +2510,16 @@ var dataBooksJquery = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-js-en.js":
-/*!**********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-js-en.js ***!
-  \**********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-js-en.js":
+/*!****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-js-en.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksJsEn": () => (/* binding */ dataBooksJsEn)
+/* harmony export */   dataBooksJsEn: () => (/* binding */ dataBooksJsEn)
 /* harmony export */ });
 var dataBooksJsEn = [{
   "id": 1,
@@ -2610,16 +2549,6 @@ var dataBooksJsEn = [{
   "title": "Programming JavaScript Applications (eng)",
   "author": "Eric Elliott",
   "pages": "253",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 4,
-  "year": 2014,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Head First JavaScript Programming (eng)",
-  "author": "Eric Freeman, Elisabeth Robson",
-  "pages": "704",
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3262,20 +3191,30 @@ var dataBooksJsEn = [{
   "pages": "375",
   "isLearned": false,
   "dateLearned": ""
+}, {
+  "id": 69,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JavaScript All-in-One For Dummies",
+  "author": "Minnick Chris",
+  "pages": "819",
+  "isLearned": false,
+  "dateLearned": ""
 }, {}];
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-js.js":
-/*!*******************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-js.js ***!
-  \*******************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-js.js":
+/*!*************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-js.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksJs": () => (/* binding */ dataBooksJs)
+/* harmony export */   dataBooksJs: () => (/* binding */ dataBooksJs)
 /* harmony export */ });
 var dataBooksJs = [{
   "id": 1,
@@ -3284,7 +3223,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "JavaScript шаблоны (рус)",
   "author": "Стоян Стефанов",
-  "pages": "212",
+  "pages": 212,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3294,7 +3233,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "Веб-приложения на JavaScript",
   "author": "Алекс Макоу",
-  "pages": "288",
+  "pages": 288,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3304,7 +3243,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "JavaScript. Сильные стороны",
   "author": "Дуглас Крокфорд",
-  "pages": "176",
+  "pages": 176,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3314,7 +3253,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "Web-программирование JavaScript",
   "author": "Зудилова, Буркова",
-  "pages": "68",
+  "pages": 68,
   "isLearned": true,
   "dateLearned": "2022-05-31 вт"
 }, {
@@ -3324,7 +3263,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "HeadFirst JavaScript",
   "author": "Майкл Моррисон",
-  "pages": "608",
+  "pages": 608,
   "isLearned": true,
   "dateLearned": "2022-05-24 вт"
 }, {
@@ -3332,9 +3271,9 @@ var dataBooksJs = [{
   "year": 2012,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript Оптимизация производительности(рус)",
+  "title": "JavaScript Оптимизация производительности",
   "author": "Николас Закас",
-  "pages": "256",
+  "pages": 256,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3344,7 +3283,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "JavaScript. Карманный справочник (3е)",
   "author": "Дэвид Флэнаган",
-  "pages": "320",
+  "pages": 320,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3354,7 +3293,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "Сила JavaScript. 68 способов",
   "author": "Дэвид Херман",
-  "pages": "288",
+  "pages": 288,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3364,7 +3303,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "Графика на JavaScript",
   "author": "Рафаэлло Чекко",
-  "pages": "272",
+  "pages": 272,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3374,7 +3313,7 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "Сюрреализм на JavaScript",
   "author": "Алексей Бахирев",
-  "pages": "228",
+  "pages": 228,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3382,19 +3321,19 @@ var dataBooksJs = [{
   "year": 2014,
   "category": "code",
   "theme": "javascript",
-  "title": "Паттерны для масштабируемых JavaScript-приложений",
-  "author": "Эдди Османи",
-  "pages": "38",
+  "title": "Создание игр на JavaScript",
+  "author": "Арьян Эггес",
+  "pages": 409,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 12,
-  "year": 2015,
+  "year": 2014,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript для профессиональных веб-разработчиков (3е)",
-  "author": "Николас Закас",
-  "pages": "960",
+  "title": "Паттерны для масштабируемых JavaScript-приложений",
+  "author": "Эдди Османи",
+  "pages": 38,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3402,26 +3341,37 @@ var dataBooksJs = [{
   "year": 2015,
   "category": "code",
   "theme": "javascript",
+  "title": "Конспект js-course",
+  "author": "Конспект",
+  "pages": 231,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 14,
+  "year": 2015,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JavaScript для профессиональных веб-разработчиков (3е)",
+  "author": "Николас Закас",
+  "pages": 960,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 15,
+  "year": 2015,
+  "category": "code",
+  "theme": "javascript",
   "title": "HeadFirst Программирование на JavaScript",
   "author": "Эрик Фримен, Элизабет Робсон",
-  "pages": "640",
+  "pages": 640,
   "isLearned": true,
   "dateLearned": "2021-10-01 пт",
   "origin": {
     "year": 2014,
     "title": "Head First - JavaScript Programming (eng)",
-    "author": "Eric Freeman"
+    "author": "Eric Freeman, Elisabeth Robson",
+    "pages": 704
   }
-}, {
-  "id": 15,
-  "year": 2016,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Разработка игр на языке JavaScript (1е)",
-  "author": "Беляев",
-  "pages": "128",
-  "isLearned": true,
-  "dateLearned": "2022-06-02 чт"
 }, {
   "id": 16,
   "year": 2016,
@@ -3429,82 +3379,95 @@ var dataBooksJs = [{
   "theme": "javascript",
   "title": "JavaScript для профессионалов (2е)",
   "author": "Джон Резиг",
-  "pages": "240",
+  "pages": 240,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2016,
     "title": "Pro JavaScript Techniques (2nd)",
-    "author": "John Resig"
+    "author": "John Resig",
+    "pages": 193
   }
 }, {
   "id": 17,
   "year": 2016,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript для профессионалов (2е) (eng)",
-  "author": "Джон Резиг",
-  "pages": "240",
-  "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2016,
-    "title": "Pro JavaScript Techniques (2nd)",
-    "author": "John Resig"
-  }
+  "title": "ИНТУИТ - Основы JavaScript",
+  "author": "ИНТУИТ",
+  "pages": 185,
+  "isLearned": true,
+  "dateLearned": "2022-06-06 пн"
 }, {
   "id": 18,
   "year": 2016,
   "category": "code",
   "theme": "javascript",
-  "title": "ИНТУИТ - Основы JavaScript",
-  "author": "ИНТУИТ",
-  "pages": "185",
+  "title": "ИНТУИТ - Основы программирования на JavaScript (2е)",
+  "author": "Кан",
+  "pages": 168,
   "isLearned": true,
-  "dateLearned": "2022-06-06 пн"
+  "dateLearned": "2022-06-10 пт"
 }, {
   "id": 19,
   "year": 2016,
   "category": "code",
   "theme": "javascript",
-  "title": "ИНТУИТ - Основы программирования на JavaScript (2е)",
-  "author": "Кан",
-  "pages": "168",
-  "isLearned": true,
-  "dateLearned": "2022-06-10 пт"
-}, {
-  "id": 20,
-  "year": 2016,
-  "category": "code",
-  "theme": "javascript",
   "title": "Введение в ECMAScript 6",
   "author": "Нараян Прасти",
-  "pages": "178",
+  "pages": 178,
   "isLearned": true,
   "dateLearned": "2023-03-18 сб",
   "origin": {
     "year": 2015,
     "title": "Learning ESMAScript 6 (eng)",
-    "author": "Narayan Prusty"
+    "author": "Narayan Prusty",
+    "pages": 202
   }
 }, {
-  "id": 22,
+  "id": 20,
   "year": 2016,
   "category": "code",
   "theme": "javascript",
   "title": "JavaScript для детей. Самоучитель",
   "author": "Ник Морган",
-  "pages": "288",
+  "pages": 288,
   "isLearned": true,
   "dateLearned": "2021-09-16 чт"
+}, {
+  "id": 21,
+  "year": 2017,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Секреты JavaScript ниндзя (2е)",
+  "author": "Джон Резиг",
+  "pages": 544,
+  "isLearned": false,
+  "dateLearned": "",
+  "origin": {
+    "year": 2016,
+    "title": "Secrets of the JavaScript Ninja (2nd) (eng)",
+    "author": "John Resig",
+    "pages": 468
+  }
+}, {
+  "id": 22,
+  "year": 2017,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JavaScript в примерах",
+  "author": "Кингсли-Хью",
+  "pages": 272,
+  "isLearned": false,
+  "dateLearned": ""
 }, {
   "id": 23,
   "year": 2017,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript в примерах и задачах",
-  "author": "Алексей Васильев",
-  "pages": "720",
+  "title": "JavaScript для чайников",
+  "author": "Крис Минник",
+  "pages": 320,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3512,303 +3475,227 @@ var dataBooksJs = [{
   "year": 2017,
   "category": "code",
   "theme": "javascript",
-  "title": "Секреты JavaScript ниндзя (2е)",
-  "author": "Джон Резиг",
-  "pages": "544",
+  "title": "ECMAScript 6 для разработчиков",
+  "author": "Николас Закас",
+  "pages": 352,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2016,
-    "title": "Secrets of the JavaScript Ninja (2nd) (eng)",
-    "author": "John Resig"
+    "title": "Understanding Ecmascript 6 (eng)",
+    "author": "Nicholas Zakas",
+    "pages": 355
   }
 }, {
   "id": 25,
   "year": 2017,
   "category": "code",
   "theme": "javascript",
-  "title": "Секреты JavaScript ниндзя (2е) (eng)",
-  "author": "Джон Резиг",
-  "pages": "544",
+  "title": "Изучаем JavaScript (3е)",
+  "author": "Этан Браун",
+  "pages": 368,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2016,
-    "title": "Secrets of the JavaScript Ninja (2nd) (eng)",
-    "author": "John Resig"
+    "title": "Learning JavaScript (3rd) (eng)",
+    "author": "Ethan Brown",
+    "pages": 364
   }
 }, {
   "id": 26,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "JavaScript в примерах",
-  "author": "Кингсли-Хью",
-  "pages": "272",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 27,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "JavaScript для чайников",
-  "author": "Крис Минник",
-  "pages": "320",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 28,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "ECMAScript 6 для разработчиков",
-  "author": "Николас Закас",
-  "pages": "352",
-  "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2016,
-    "title": "Understanding Ecmascript 6 (eng)",
-    "author": "Nicholas Zakas"
-  }
-}, {
-  "id": 29,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "ECMAScript 6 для разработчиков (eng)",
-  "author": "Николас Закас",
-  "pages": "352",
-  "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2016,
-    "title": "Understanding Ecmascript 6 (eng)",
-    "author": "Nicholas Zakas"
-  }
-}, {
-  "id": 30,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Javascript на примерах",
-  "author": "Никольский",
-  "pages": "272",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 31,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Изучаем JavaScript (3е)",
-  "author": "Этан Браун",
-  "pages": "368",
-  "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2016,
-    "title": "Learning JavaScript (3rd) (eng)",
-    "author": "Ethan Brown"
-  }
-}, {
-  "id": 32,
-  "year": 2017,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Изучаем JavaScript (3е) (eng)",
-  "author": "Этан Браун",
-  "pages": "368",
-  "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2016,
-    "title": "Learning JavaScript (3rd) (eng)",
-    "author": "Ethan Brown"
-  }
-}, {
-  "id": 33,
   "year": 2018,
   "category": "code",
   "theme": "javascript",
   "title": "Функциональное программирование на JavaScript",
   "author": "Луис Атенсио",
-  "pages": "304",
+  "pages": 304,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 34,
+  "id": 27,
   "year": 2018,
   "category": "code",
   "theme": "javascript",
   "title": "JavaScript на примерах",
   "author": "Никольский",
-  "pages": "272",
+  "pages": 272,
   "isLearned": false,
-  "dateLearned": ""
+  "dateLearned": "",
+  "oldEdition": {
+    "year": 2017,
+    "pages": 272
+  }
 }, {
-  "id": 35,
-  "year": 2019,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Введение в веб-разработку на JS",
-  "author": "Государев",
-  "pages": "141",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 36,
+  "id": 28,
   "year": 2019,
   "category": "code",
   "theme": "javascript",
   "title": "Учимся кодить на JavaScript",
   "author": "Джереми Мориц",
-  "pages": "256",
+  "pages": 256,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 37,
+  "id": 29,
   "year": 2019,
   "category": "code",
   "theme": "javascript",
   "title": "Как устроен JavaScript",
   "author": "Дуглас Крокфорд",
-  "pages": "304",
+  "pages": 304,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 38,
+  "id": 30,
   "year": 2019,
   "category": "code",
   "theme": "javascript",
-  "title": "Выразительный JavaScript (3е) (eng)",
+  "title": "Введение в веб-разработку на JS",
+  "author": "Илья Государев",
+  "pages": 141,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 31,
+  "year": 2019,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Выразительный JavaScript (3е)",
   "author": "Марейн Хавербек",
-  "pages": "480",
+  "pages": 482,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2018,
     "title": "Eloquent JavaScript (3rd) (eng)",
-    "author": "Marijn Haverbeke"
+    "author": "Marijn Haverbeke",
+    "pages": 448
+  },
+  "oldEdition": {
+    "year": 2015,
+    "title": "Выразительный JavaScript (2е)",
+    "pages": 745
   }
 }, {
-  "id": 39,
+  "id": 32,
   "year": 2019,
   "category": "code",
   "theme": "javascript",
   "title": "Рефакторинг кода на JavaScript (2e)",
   "author": "Мартин Фаулер",
-  "pages": "464",
+  "pages": 464,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 40,
-  "year": 2020,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Разработка игр на языке JavaScript (3е)",
-  "author": "Беляев",
-  "pages": "128",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 41,
+  "id": 33,
   "year": 2020,
   "category": "code",
   "theme": "javascript",
   "title": "Клиентские технологии веб-программирования: JаvaScript и DOM",
-  "author": "Диков",
-  "pages": "124",
+  "author": "Андрей Диков",
+  "pages": 124,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 42,
+  "id": 34,
   "year": 2020,
   "category": "code",
   "theme": "javascript",
   "title": "JavaScript для FrontEnd разработчиков",
-  "author": "Кириченко",
-  "pages": "320",
+  "author": "Андрей Кириченко",
+  "pages": 320,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 43,
+  "id": 35,
+  "year": 2020,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Javascript. Основы программирования",
+  "author": "Попов",
+  "pages": 116,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 36,
   "year": 2020,
   "category": "code",
   "theme": "javascript",
   "title": "Бессерверные приложения на JavaScript",
   "author": "Слободан Стоянович",
-  "pages": "394",
+  "pages": 394,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 44,
+  "id": 37,
   "year": 2020,
   "category": "code",
   "theme": "javascript",
   "title": "Разработка программных комплексов на языке JavaScript",
   "author": "Солодушкин",
-  "pages": "136",
+  "pages": 136,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 44,
+  "id": 38,
   "year": 2020,
   "category": "code",
   "theme": "javascript",
   "title": "Веб-компоненты в действии",
   "author": "Фаррелл",
-  "pages": "462",
+  "pages": 462,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 45,
+  "id": 39,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
   "title": "Разработка на JavaScript",
   "author": "Адам Скотт",
-  "pages": "320",
+  "pages": 320,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2020,
     "title": "JavaScript Everywhere",
-    "author": "Adam Scott"
+    "author": "Adam Scott",
+    "pages": 50
   }
 }, {
-  "id": 46,
+  "id": 40,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
-  "title": "Разработка на JavaScript (eng)",
-  "author": "Адам Скотт",
-  "pages": "320",
+  "title": "Web-программирование на javascript",
+  "author": "Андрей Диков",
+  "pages": 169,
   "isLearned": false,
-  "dateLearned": "",
-  "origin": {
-    "year": 2020,
-    "title": "JavaScript Everywhere",
-    "author": "Adam Scott"
-  }
+  "dateLearned": ""
 }, {
-  "id": 47,
+  "id": 41,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
   "title": "JavaScript. Полное руководство (7е)",
   "author": "Дэвид Флэнаган",
-  "pages": "720",
+  "pages": 720,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2020,
     "title": "JavaScript. The Definitive Guide (7th)",
-    "author": "David Flanagan"
+    "author": "David Flanagan",
+    "pages": 707
+  },
+  "oldEdition": {
+    "year": 2012,
+    "title": "JavaScript. Полное руководство (6е)",
+    "pages": 1080
   }
 }, {
-  "id": 48,
+  "id": 42,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
@@ -3820,16 +3707,77 @@ var dataBooksJs = [{
   "origin": {
     "year": 2020,
     "title": "JavaScript. The Definitive Guide (7th)",
-    "author": "David Flanagan"
+    "author": "David Flanagan",
+    "pages": 707
   }
+}, {
+  "id": 43,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 1 Приступим",
+  "author": "Кайл Симпсон",
+  "pages": 64,
+  "isLearned": true,
+  "dateLearned": "2021-09-15 ср"
+}, {
+  "id": 44,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 2 Область видимости и замыкания",
+  "author": "Кайл Симпсон",
+  "pages": 59,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 45,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 2 и 3 Замыкания и объекты",
+  "author": "Кайл Симпсон",
+  "pages": 336,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 46,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 4 Типы и грамматические конструкции",
+  "author": "Кайл Симпсон",
+  "pages": 240,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 47,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 5 Асинхронная обработка и оптимизация",
+  "author": "Кайл Симпсон",
+  "pages": 352,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 48,
+  "year": 2021,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Вы не знаете JS 6 ES6 и не только",
+  "author": "Кайл Симпсон",
+  "pages": 336,
+  "isLearned": false,
+  "dateLearned": ""
 }, {
   "id": 49,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
-  "title": "JS часть 1 Язык JavaScript",
-  "author": "Илья Кантор",
-  "pages": "731",
+  "title": "Современный JavaScript для нетерпеливых",
+  "author": "Кей Хорстман",
+  "pages": 288,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3837,9 +3785,9 @@ var dataBooksJs = [{
   "year": 2021,
   "category": "code",
   "theme": "javascript",
-  "title": "JS часть 2 Браузер: документ, события, интерфейсы",
-  "author": "Илья Кантор",
-  "pages": "309",
+  "title": "JavaScript с нуля",
+  "author": "Кирупа Чиннатхамби",
+  "pages": 400,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3847,109 +3795,113 @@ var dataBooksJs = [{
   "year": 2021,
   "category": "code",
   "theme": "javascript",
-  "title": "JS часть 3 Дополнительные статьи",
-  "author": "Илья Кантор",
-  "pages": "478",
-  "isLearned": false,
-  "dateLearned": ""
+  "title": "Справочник Javascript",
+  "author": "Никольский",
+  "pages": 306,
+  "isLearned": true,
+  "dateLearned": "2022-05-24 вт"
 }, {
   "id": 52,
   "year": 2021,
   "category": "code",
   "theme": "javascript",
-  "title": "Вы не знаете JS 1 Приступим",
-  "author": "Кайл Симпсон",
-  "pages": "64",
-  "isLearned": true,
-  "dateLearned": "2021-09-15 ср"
-}, {
-  "id": 53,
-  "year": 2021,
-  "category": "code",
-  "theme": "javascript",
-  "title": "Вы не знаете JS 2 Область видимости и замыкания",
-  "author": "Кайл Симпсон",
-  "pages": "59",
+  "title": "JavaScript для глубокого обучения",
+  "author": "Франсуа Шолле",
+  "pages": 576,
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 54,
-  "year": 2021,
+  "id": 53,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Вы не знаете JS 2 и 3 Замыкания и объекты",
-  "author": "Кайл Симпсон",
-  "pages": "336",
+  "title": "Программирование на JavaScript в примерах и задачах",
+  "author": "Алексей Васильев",
+  "pages": 722,
+  "isLearned": false,
+  "dateLearned": "",
+  "oldEdition": {
+    "year": 2022,
+    "pages": 721
+  }
+}, {
+  "id": 54,
+  "year": 2022,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JavaScript и PHP. Content management system",
+  "author": "Валерий Янцев",
+  "pages": 191,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 55,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Вы не знаете JS 4 Типы и грамматические конструкции",
-  "author": "Кайл Симпсон",
-  "pages": "240",
+  "title": "JavaScript. Визуальные редакторы",
+  "author": "Валерий Янцев",
+  "pages": 168,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 56,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Вы не знаете JS 5 Асинхронная обработка и оптимизация",
-  "author": "Кайл Симпсон",
-  "pages": "352",
+  "title": "JavaScript. Готовые программы",
+  "author": "Валерий Янцев",
+  "pages": 201,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 57,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Вы не знаете JS 6 ES6 и не только",
-  "author": "Кайл Симпсон",
-  "pages": "336",
+  "title": "JavaScript. Как писать программы",
+  "author": "Валерий Янцев",
+  "pages": 199,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 58,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Современный JavaScript для нетерпеливых",
-  "author": "Кей Хорстман",
-  "pages": "288",
+  "title": "JavaScript. Картинки, галереи, слайдеры",
+  "author": "Валерий Янцев",
+  "pages": 252,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 59,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript с нуля",
-  "author": "Кирупа Чиннатхамби",
-  "pages": "400",
+  "title": "JavaScript. Обработка событий на примерах",
+  "author": "Валерий Янцев",
+  "pages": 175,
   "isLearned": false,
   "dateLearned": ""
 }, {
   "id": 60,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Справочник Javascript",
-  "author": "Никольский",
-  "pages": "306",
-  "isLearned": true,
-  "dateLearned": "2022-05-24 вт"
+  "title": "Javascript дополнительные уроки",
+  "author": "Владимир Дронов",
+  "pages": 354,
+  "isLearned": false,
+  "dateLearned": ""
 }, {
   "id": 61,
-  "year": 2021,
+  "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript для глубокого обучения",
-  "author": "Франсуа Шолле",
-  "pages": "576",
+  "title": "Введение в веб-разработку на языке JavaScript",
+  "author": "Илья Государев",
+  "pages": 142,
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -3957,55 +3909,139 @@ var dataBooksJs = [{
   "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "Javascript дополнительные уроки",
-  "author": "Владимир Дронов",
-  "pages": "354",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 63,
-  "year": 2022,
-  "category": "code",
-  "theme": "javascript",
   "title": "JavaScript для профессиональных веб-разработчиков (4е)",
-  "author": "Фрисби",
-  "pages": "1219",
+  "author": "Мэтт Фрисби",
+  "pages": 1219,
   "isLearned": false,
   "dateLearned": "",
   "origin": {
     "year": 2020,
     "title": "Professional JavaScript for Web Developers (4th) (eng)",
-    "author": "Matt Frisbie"
+    "author": "Matt Frisbie",
+    "pages": 1177
+  }
+}, {
+  "id": 63,
+  "year": 2022,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Разработка игр на языке JavaScript",
+  "author": "Сергей Беляев",
+  "pages": "151",
+  "isLearned": false,
+  "dateLearned": "",
+  "oldEdition": {
+    "year": 2020,
+    "title": "Разработка игр на языке JavaScript",
+    "pages": 128
+  },
+  "oldEdition2": {
+    "year": 2016,
+    "title": "Разработка игр на языке JavaScript",
+    "pages": 128,
+    "isLearned": true,
+    "dateLearned": "2022-06-02 чт"
   }
 }, {
   "id": 64,
   "year": 2022,
   "category": "code",
   "theme": "javascript",
-  "title": "JavaScript для профессиональных веб-разработчиков (4е) (eng)",
-  "author": "Фрисби",
-  "pages": "1219",
+  "title": "Многопоточный JavaScript",
+  "author": "Хантер",
+  "pages": 190,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 65,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JS часть 1 Язык JavaScript",
+  "author": "Илья Кантор",
+  "pages": 778,
   "isLearned": false,
   "dateLearned": "",
-  "origin": {
-    "year": 2020,
-    "title": "Professional JavaScript for Web Developers (4th) (eng)",
-    "author": "Matt Frisbie"
+  "oldEdition": {
+    "year": 2021,
+    "pages": 756,
+    "isLearned": true,
+    "dateLearned": "2023-05-24 ср"
+  },
+  "oldEdition2": {
+    "year": 2019,
+    "pages": 731
   }
+}, {
+  "id": 66,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JS часть 2 Браузер: документ, события, интерфейсы",
+  "author": "Илья Кантор",
+  "pages": 320,
+  "isLearned": false,
+  "dateLearned": "",
+  "oldEdition": {
+    "year": 2021,
+    "pages": 315
+  },
+  "oldEdition2": {
+    "year": 2019,
+    "pages": 309
+  }
+}, {
+  "id": 67,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JS часть 3 Дополнительные статьи",
+  "author": "Илья Кантор",
+  "pages": 474,
+  "isLearned": false,
+  "dateLearned": "",
+  "oldEdition": {
+    "year": 2021,
+    "pages": 474
+  },
+  "oldEdition2": {
+    "year": 2019,
+    "pages": 478
+  }
+}, {
+  "id": 68,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "JavaScript с нуля до профи",
+  "author": "Лоренс Свекис",
+  "pages": 480,
+  "isLearned": false,
+  "dateLearned": ""
+}, {
+  "id": 69,
+  "year": 2023,
+  "category": "code",
+  "theme": "javascript",
+  "title": "Jаvascript для начинающих",
+  "author": "Майк МакГрат",
+  "pages": 232,
+  "isLearned": false,
+  "dateLearned": ""
 }, {}];
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-node-en.js":
-/*!************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-node-en.js ***!
-  \************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-node-en.js":
+/*!******************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-node-en.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksNodeEn": () => (/* binding */ dataBooksNodeEn)
+/* harmony export */   dataBooksNodeEn: () => (/* binding */ dataBooksNodeEn)
 /* harmony export */ });
 var dataBooksNodeEn = [{
   "id": 1,
@@ -4281,16 +4317,16 @@ var dataBooksNodeEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-node.js":
-/*!*********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-node.js ***!
-  \*********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-node.js":
+/*!***************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-node.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksNode": () => (/* binding */ dataBooksNode)
+/* harmony export */   dataBooksNode: () => (/* binding */ dataBooksNode)
 /* harmony export */ });
 var dataBooksNode = [{
   "id": 1,
@@ -4432,20 +4468,30 @@ var dataBooksNode = [{
   "pages": "432",
   "isLearned": false,
   "dateLearned": ""
+}, {
+  "id": 12,
+  "year": 2021,
+  "category": "npm",
+  "theme": "node",
+  "title": "Веб разработка с применением Node и Express (2-е изд)",
+  "author": "Итан Браун",
+  "pages": "336",
+  "isLearned": false,
+  "dateLearned": ""
 }, {}];
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-php-en.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-php-en.js ***!
-  \***********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-php-en.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-php-en.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksPhpEn": () => (/* binding */ dataBooksPhpEn)
+/* harmony export */   dataBooksPhpEn: () => (/* binding */ dataBooksPhpEn)
 /* harmony export */ });
 var dataBooksPhpEn = [{
   "id": 1,
@@ -4501,16 +4547,16 @@ var dataBooksPhpEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-php.js":
-/*!********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-php.js ***!
-  \********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-php.js":
+/*!**************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-php.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksPhp": () => (/* binding */ dataBooksPhp)
+/* harmony export */   dataBooksPhp: () => (/* binding */ dataBooksPhp)
 /* harmony export */ });
 var dataBooksPhp = [{
   "id": 1,
@@ -4776,16 +4822,16 @@ var dataBooksPhp = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-python-en.js":
-/*!**************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-python-en.js ***!
-  \**************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-python-en.js":
+/*!********************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-python-en.js ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksPythonEn": () => (/* binding */ dataBooksPythonEn)
+/* harmony export */   dataBooksPythonEn: () => (/* binding */ dataBooksPythonEn)
 /* harmony export */ });
 var dataBooksPythonEn = [{
   "id": 1,
@@ -5171,16 +5217,16 @@ var dataBooksPythonEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-python.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-python.js ***!
-  \***********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-python.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-python.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksPython": () => (/* binding */ dataBooksPython)
+/* harmony export */   dataBooksPython: () => (/* binding */ dataBooksPython)
 /* harmony export */ });
 var dataBooksPython = [{
   "id": 1,
@@ -6046,16 +6092,16 @@ var dataBooksPython = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-react-en.js":
-/*!*************************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-react-en.js ***!
-  \*************************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-react-en.js":
+/*!*******************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-react-en.js ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksReactEn": () => (/* binding */ dataBooksReactEn)
+/* harmony export */   dataBooksReactEn: () => (/* binding */ dataBooksReactEn)
 /* harmony export */ });
 var dataBooksReactEn = [{
   "id": 1,
@@ -6311,16 +6357,16 @@ var dataBooksReactEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-react.js":
-/*!**********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-react.js ***!
-  \**********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-react.js":
+/*!****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-react.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksReact": () => (/* binding */ dataBooksReact)
+/* harmony export */   dataBooksReact: () => (/* binding */ dataBooksReact)
 /* harmony export */ });
 var dataBooksReact = [{
   "id": 1,
@@ -6436,16 +6482,16 @@ var dataBooksReact = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-ts-en.js":
-/*!**********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-ts-en.js ***!
-  \**********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-ts-en.js":
+/*!****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-ts-en.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksTsEn": () => (/* binding */ dataBooksTsEn)
+/* harmony export */   dataBooksTsEn: () => (/* binding */ dataBooksTsEn)
 /* harmony export */ });
 var dataBooksTsEn = [{
   "id": 1,
@@ -6611,16 +6657,16 @@ var dataBooksTsEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-ts.js":
-/*!*******************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-ts.js ***!
-  \*******************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-ts.js":
+/*!*************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-ts.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksTs": () => (/* binding */ dataBooksTs)
+/* harmony export */   dataBooksTs: () => (/* binding */ dataBooksTs)
 /* harmony export */ });
 var dataBooksTs = [{
   "id": 1,
@@ -6696,16 +6742,16 @@ var dataBooksTs = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-vue-en.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-vue-en.js ***!
-  \***********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-vue-en.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-vue-en.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksVueEn": () => (/* binding */ dataBooksVueEn)
+/* harmony export */   dataBooksVueEn: () => (/* binding */ dataBooksVueEn)
 /* harmony export */ });
 var dataBooksVueEn = [{
   "id": 1,
@@ -6881,16 +6927,16 @@ var dataBooksVueEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-vue.js":
-/*!********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-vue.js ***!
-  \********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-vue.js":
+/*!**************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-vue.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksVue": () => (/* binding */ dataBooksVue)
+/* harmony export */   dataBooksVue: () => (/* binding */ dataBooksVue)
 /* harmony export */ });
 var dataBooksVue = [{
   "id": 1,
@@ -6906,16 +6952,16 @@ var dataBooksVue = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-web-en.js":
-/*!***********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-web-en.js ***!
-  \***********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-web-en.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-web-en.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksWebEn": () => (/* binding */ dataBooksWebEn)
+/* harmony export */   dataBooksWebEn: () => (/* binding */ dataBooksWebEn)
 /* harmony export */ });
 var dataBooksWebEn = [{
   "id": 1,
@@ -7051,16 +7097,16 @@ var dataBooksWebEn = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/data-books/data-books-web.js":
-/*!********************************************************************!*\
-  !*** ./src/components/front-books/js/data-books/data-books-web.js ***!
-  \********************************************************************/
+/***/ "./src/components/front-books/js/data/data-books-web.js":
+/*!**************************************************************!*\
+  !*** ./src/components/front-books/js/data/data-books-web.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "dataBooksWeb": () => (/* binding */ dataBooksWeb)
+/* harmony export */   dataBooksWeb: () => (/* binding */ dataBooksWeb)
 /* harmony export */ });
 var dataBooksWeb = [{
   "id": 1,
@@ -7072,26 +7118,6 @@ var dataBooksWeb = [{
   "pages": "92",
   "isLearned": true,
   "dateLearned": "2021-07-21 ср"
-}, {
-  "id": 1,
-  "year": 2010,
-  "category": "other",
-  "theme": "web",
-  "title": "HTML, XHTML и CSS на 100 %",
-  "author": "Квинт",
-  "pages": "384",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 2,
-  "year": 2010,
-  "category": "other",
-  "theme": "web",
-  "title": "Веб-мастеринг на 100 HTML CSS JS PHP",
-  "author": "Пётр Ташков",
-  "pages": "512",
-  "isLearned": false,
-  "dateLearned": ""
 }, {
   "id": 3,
   "year": 2010,
@@ -7120,26 +7146,6 @@ var dataBooksWeb = [{
   "title": "Веб дизайн. Анализ по движению глаз",
   "author": "Якоб Нильсен",
   "pages": "480",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 6,
-  "year": 2011,
-  "category": "other",
-  "theme": "web",
-  "title": "HTML скрипты и стили (3е)",
-  "author": "Вадим Дунаев",
-  "pages": "816",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 7,
-  "year": 2011,
-  "category": "other",
-  "theme": "web",
-  "title": "HTML5, CSS3, Web 2.0. Разработка современных Web-сайтов",
-  "author": "Владимир Дронов",
-  "pages": "416",
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -7203,16 +7209,6 @@ var dataBooksWeb = [{
   "isLearned": false,
   "dateLearned": ""
 }, {
-  "id": 14,
-  "year": 2013,
-  "category": "other",
-  "theme": "web",
-  "title": "Веб-мастеринг на 100 HTML CSS JS PHP",
-  "author": "Роман Клименко",
-  "pages": "512",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
   "id": 15,
   "year": 2013,
   "category": "other",
@@ -7240,16 +7236,6 @@ var dataBooksWeb = [{
   "title": "Книга веб-программиста",
   "author": "Хоган",
   "pages": "288",
-  "isLearned": false,
-  "dateLearned": ""
-}, {
-  "id": 18,
-  "year": 2014,
-  "category": "other",
-  "theme": "web",
-  "title": "HTML5, CSS3 и JavaScript Исчерпывающее руководство (4е)",
-  "author": "Дженнифер Роббинс",
-  "pages": "528",
   "isLearned": false,
   "dateLearned": ""
 }, {
@@ -7416,19 +7402,143 @@ var dataBooksWeb = [{
 
 /***/ }),
 
-/***/ "./src/components/front-books/js/front-books.js":
-/*!******************************************************!*\
-  !*** ./src/components/front-books/js/front-books.js ***!
-  \******************************************************/
+/***/ "./src/components/front-books/js/f-create-category.js":
+/*!************************************************************!*\
+  !*** ./src/components/front-books/js/f-create-category.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _front_books__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../_front-books */ "./src/components/front-books/_front-books.js");
-/* harmony import */ var _front_books__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_front_books__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _create_data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create-data.js */ "./src/components/front-books/js/create-data.js");
-/* harmony import */ var _create_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create-list.js */ "./src/components/front-books/js/create-list.js");
-/* harmony import */ var _create_learned_list_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./create-learned-list.js */ "./src/components/front-books/js/create-learned-list.js");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createCategory: () => (/* binding */ createCategory)
+/* harmony export */ });
+/*****************
+Функция createCategory принимает массив input, создает и возвращает объект category
+*****************/
+/*
+Алгоритм работы
+1. Импортируем массивы из файлов data-books.js...
+2. Создаем объект dataFrontBooks
+3. В объект dataFrontBooks добавим свойство inputArrays и запишем в него массив импортированных массивов
+4. В объект dataFrontBooks добавим свойство allBooks и запишем в него массив всех книг
+5. В объект dataFrontBooks добавим свойство category для массива с категориями
+5. В объект dataFrontBooks добавим свойство learned для массива с изученными книгами
+6. Проходим по массиву всех книг
+  6.1 Если у книги есть категория и этой категории нет в массиве категорий то добавить
+  6.2 Если у книги есть тема и этой темы нет в данной категории то добавить
+  6.3 Если есть категория и тема то в тему добавить объект с книгой
+  6.4 Если книга имеет свойство isLearned === true, то добавляем ее в массив dataFrontBooks.learned
+7. Экспортируем объект dataFrontBooks
+*/
+
+function createCategory(data) {
+  //4. Создаем объект result
+  var result = {};
+  result.result = {};
+  result.learned = [];
+
+  //6. Проходим по массиву data
+  data.forEach(function (elem) {
+    //6.1 Если у книги есть категория и этой категории нет в массиве категорий то добавить
+    if (elem.category && !(elem.category in result.result)) {
+      result.result[elem.category] = {};
+    }
+
+    //6.2 Если у книги есть тема и этой темы нет в данной категории то добавить
+    if (elem.theme && !(elem.theme in result.result[elem.category])) {
+      result.result[elem.category][elem.theme] = [];
+    }
+
+    //6.3 Если есть категория и тема то в тему добавить объект с книгой
+    if (elem.category && elem.theme) {
+      result.result[elem.category][elem.theme].push(elem);
+    }
+
+    //6.4 Если книга имеет свойство isLearned === true, то добавляем ее в массив learned
+    if (elem.isLearned === true) {
+      result.learned.push(elem);
+    }
+  });
+
+  //9. Возвращаем объект result
+  return result;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-elem-main-nav.js":
+/*!*****************************************************************!*\
+  !*** ./src/components/front-books/js/f-create-elem-main-nav.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createElemMainNav: () => (/* binding */ createElemMainNav)
+/* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+/*****************
+Функция createElemMainNav принимает объект elements, создает и возвращает элемент mainNav
+*****************/
+function createElemMainNav(data) {
+  //1. Создадим элемент main-nav
+  var mainNav = document.createElement('nav');
+  mainNav.className = 'nav container';
+  mainNav.id = 'main-nav';
+  mainNav.append.apply(mainNav, _toConsumableArray(data.navDiv));
+
+  //3. Создадим и вызовем событие click на первом mainNav эелементе
+  var eventClick = new Event('click');
+  data.navDiv[0].dispatchEvent(eventClick);
+  return mainNav;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-elem-section.js":
+/*!****************************************************************!*\
+  !*** ./src/components/front-books/js/f-create-elem-section.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createElemSection: () => (/* binding */ createElemSection)
+/* harmony export */ });
+/*****************
+Функция createElemSection принимает объект elements, создает и возвращает элемент Section
+*****************/
+
+function createElemSection(data) {
+  var elemSection = document.createElement('section');
+  elemSection.className = 'main__aside container';
+  elemSection.append(data.aside, data.main);
+  return elemSection;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-elements.js":
+/*!************************************************************!*\
+  !*** ./src/components/front-books/js/f-create-elements.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createElements: () => (/* binding */ createElements)
+/* harmony export */ });
+/* harmony import */ var _f_create_list_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./f-create-list.js */ "./src/components/front-books/js/f-create-list.js");
+/* harmony import */ var _f_create_learned_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./f-create-learned-list.js */ "./src/components/front-books/js/f-create-learned-list.js");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -7437,179 +7547,366 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symb
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 /****************
-Скрипт из файла books.js
+Функция createElements принимает объект category, создает и возвращает массив elements
 *******************/
 /*
 Алгоритм работы
-1. Проверяем что страница имеет id="front-books"
-2. Создаем объект data упорядоченный по категориям и темам
-3. Создаем main-nav
-  3.1 Создаем массив navDiv для элементов main-nav
-  3.2 Создаем элемент elementNav для каждой категории
-  3.3 Добавляем элемент elementNav в массив navDiv
-4. Создаем aside меню
-  4.1 Создаем массив asideDiv для элементов aside меню
-  4.2 Создаем элемент elementAside для каждой темы
-  4.3 Добавляем элемент elementAside в массив asideDiv
-5. Создаем контент для main
-  5.1 Создаем массив mainDiv для элементов main
-  5.2 Добавим в массив mainDiv массив с книгами
-  5.3 Создаем элемент elementsMain для каждой темы
-6. По клику на элемент aside меню
-  6.1 добавим ему class="active"
-  6.2 показываем нужный заголовок h2
-  6.3 показываем нужный main
-7. По клику на элемент main-nav
-  7.1 добавим ему class="active"
-  7.2 показываем нужный aside
-8. Создадим и вызовем событие click на первом aside эелементе
-9. Добавим на страницу main-nav
-10. Создадим и вызовем событие click на первом эелементе из main-nav
+
 */
 
 
 
+function createElements(data) {
+  //временные переменные для хранения контента, который появится на странице
+  var aside = document.createElement('aside');
+  aside.className = 'aside';
+  var main = document.createElement('main');
+  main.className = 'list';
+  var h2 = document.createElement('h2');
+  var currentContent = document.createElement('ol');
+  currentContent.id = 'books';
 
+  //1. Создаем объект для main-nav, aside и main
+  var elements = {};
 
-var currentPage = document.querySelector('#front-books');
+  //2. Создаем main-nav
+  //2.1 Создаем массив navDiv для элементов main-nav
+  var navDiv = [];
+  var _loop = function _loop(category) {
+    //2.2 Создаем элемент elementNav для каждой категории
+    var elementNav = document.createElement('a');
+    elementNav.href = "#";
+    elementNav.innerHTML = category;
 
-//1. Проверяем что страница имеет id="front-books"
-if (currentPage) {
-  (function () {
-    //Ставим class="active" выбранному элементу меню и убираем с остальных
-    var classActive = function classActive(elementOl, elementLi) {
-      elementOl.forEach(function (li) {
-        li.classList.remove('active');
-      });
-      elementLi.classList.add('active');
-      //показываем элемент aside меню
-      aside.classList.remove('none');
-    }; //Функция addLearned добавляет в main-nav элемент Learned
-    var addLearned = function addLearned() {
-      var elementNav = document.createElement('a');
-      elementNav.href = "#";
-      elementNav.innerHTML = 'Learned';
-      navDiv.push(elementNav);
-      var elementMain = (0,_create_learned_list_js__WEBPACK_IMPORTED_MODULE_3__.createLearnedList)(_create_data_js__WEBPACK_IMPORTED_MODULE_1__.learnedBooks);
+    //2.3 Добавляем элемент elementNav в массив navDiv
+    navDiv.push(elementNav);
 
-      //По клику на элемент Learned
-      elementNav.addEventListener('click', function (e) {
+    //3. Создаем aside меню
+    //3.1 Создаем массив asideDiv для элементов aside меню
+    var asideDiv = [];
+    var _loop2 = function _loop2(theme) {
+      //3.2 Создаем элемент elementAside для каждой темы
+      var elementAside = document.createElement('a');
+      elementAside.href = "#";
+      elementAside.innerHTML = theme;
+
+      //3.3 Добавляем элемент elementAside в массив asideDiv
+      asideDiv.push(elementAside);
+
+      //4. Создаем контент для main
+      //4.1 Создаем массив mainDiv для элементов main
+      var mainDiv = [];
+      var _iterator = _createForOfIteratorHelper(data.result[category][theme]),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var content = _step.value;
+          //4.2 Добавим в массив mainDiv массив с фильмами
+          mainDiv.push(content);
+        }
+
+        //4.3 Создаем элемент elementsMain для каждой темы
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+      var elementMain = (0,_f_create_list_js__WEBPACK_IMPORTED_MODULE_0__.createList)(mainDiv);
+
+      //5. По клику на элемент aside меню
+      elementAside.addEventListener('click', function (e) {
         e.preventDefault();
 
-        //добавим ему class="active"
-        classActive(navDiv, elementNav);
+        //5.1 добавим ему class="active"
+        classActive(asideDiv, elementAside);
 
-        //показываем нужный заголовок h2
-        h2.innerHTML = 'Прочитанные книги';
+        //5.2 показываем нужный заголовок h2
+        h2.innerHTML = theme;
 
-        //скрываем элемент aside меню
-        aside.classList.add('none');
-
-        //показываем нужный main
+        //5.3 показываем нужный main
         currentContent.innerHTML = '';
         currentContent.append.apply(currentContent, _toConsumableArray(elementMain));
       });
     };
-    console.log('currentPage', currentPage);
-    var mainNav = document.querySelector('#main-nav');
-    var aside = document.querySelector('.aside');
-    var h2 = document.querySelector('h2');
-    var currentContent = document.querySelector('#books');
-
-    //2. Создаем объект data упорядоченный по категориям и темам
-    var data = _create_data_js__WEBPACK_IMPORTED_MODULE_1__.dataBooks;
-
-    //3. Создаем main-nav
-    //3.1 Создаем массив navDiv для элементов main-nav
-    var navDiv = [];
-    var _loop = function _loop(category) {
-      //3.2 Создаем элемент elementNav для каждой категории
-      var elementNav = document.createElement('a');
-      elementNav.href = "#";
-      elementNav.innerHTML = category;
-
-      //3.3 Добавляем элемент elementNav в массив navDiv
-      navDiv.push(elementNav);
-
-      //4. Создаем aside меню
-      //4.1 Создаем массив asideDiv для элементов aside меню
-      var asideDiv = [];
-      var _loop2 = function _loop2(theme) {
-        //4.2 Создаем элемент elementAside для каждой темы
-        var elementAside = document.createElement('a');
-        elementAside.href = "#";
-        elementAside.innerHTML = theme;
-
-        //4.3 Добавляем элемент elementAside в массив asideDiv
-        asideDiv.push(elementAside);
-
-        //5. Создаем контент для main
-        //5.1 Создаем массив mainDiv для элементов main
-        var mainDiv = [];
-        var _iterator = _createForOfIteratorHelper(data[category][theme]),
-          _step;
-        try {
-          for (_iterator.s(); !(_step = _iterator.n()).done;) {
-            var content = _step.value;
-            //5.2 Добавим в массив mainDiv массив с книгами
-            mainDiv.push(content);
-          }
-
-          //5.3. Создаем элемент elementsMain для каждой темы
-        } catch (err) {
-          _iterator.e(err);
-        } finally {
-          _iterator.f();
-        }
-        var elementMain = (0,_create_list_js__WEBPACK_IMPORTED_MODULE_2__.createList)(mainDiv);
-
-        //6. По клику на элемент aside меню
-        elementAside.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          //6.1 добавим ему class="active"
-          classActive(asideDiv, elementAside);
-
-          //6.2 показываем нужный заголовок h2
-          h2.innerHTML = theme;
-
-          //6.3 показываем нужный main
-          currentContent.innerHTML = '';
-          currentContent.append.apply(currentContent, _toConsumableArray(elementMain));
-        });
-      };
-      for (var theme in data[category]) {
-        _loop2(theme);
-      }
-
-      //7. По клику на элемент main-nav
-      elementNav.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        //7.1 добавим ему class="active"
-        classActive(navDiv, elementNav);
-
-        //7.2 показываем нужный aside
-        aside.innerHTML = '';
-        aside.append.apply(aside, asideDiv);
-
-        //8. Создадим и вызовем событие click на первом aside эелементе
-        var eventClick = new Event('click');
-        asideDiv[0].dispatchEvent(eventClick);
-      });
-    };
-    for (var category in data) {
-      _loop(category);
+    for (var theme in data.result[category]) {
+      _loop2(theme);
     }
 
-    //9. Добавим на страницу main-nav
-    addLearned();
-    mainNav.append.apply(mainNav, navDiv);
+    //6. По клику на элемент main-nav
+    elementNav.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    //10. Создадим и вызовем событие click на первом эелементе из main-nav
-    var eventClick = new Event('click');
-    navDiv[0].dispatchEvent(eventClick);
-  })();
+      //6.1 добавим ему class="active"
+      classActive(navDiv, elementNav);
+
+      //6.2 показываем нужный aside
+      aside.innerHTML = '';
+      aside.append.apply(aside, asideDiv);
+
+      //показываем элемент aside меню
+      aside.classList.remove('none');
+
+      //7. Создадим и вызовем событие click на первом aside эелементе
+      var eventClick = new Event('click');
+      asideDiv[0].dispatchEvent(eventClick);
+    });
+  };
+  for (var category in data.result) {
+    _loop(category);
+  }
+
+  //4. Добавим в navDiv пункт меню learned
+  addLearned();
+  //mainNav.append(...navDiv);
+
+  //6. Функция addLearned добавляет в main-nav элемент Learned
+  function addLearned() {
+    var elementNav = document.createElement('a');
+    elementNav.href = "#";
+    elementNav.innerHTML = 'Learned';
+    navDiv.push(elementNav);
+    var elementMain = (0,_f_create_learned_list_js__WEBPACK_IMPORTED_MODULE_1__.createLearnedList)(data.learned);
+
+    //По клику на элемент Learned
+    elementNav.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      //добавим ему class="active"
+      classActive(navDiv, elementNav);
+
+      //показываем нужный заголовок h2
+      h2.innerHTML = 'Прочитанные книги';
+
+      //скрываем элемент aside меню
+      aside.classList.add('none');
+
+      //показываем нужный main
+      currentContent.innerHTML = '';
+      currentContent.append.apply(currentContent, _toConsumableArray(elementMain));
+    });
+  }
+
+  //Ставим class="active" выбранному элементу меню и убираем с остальных
+  function classActive(elementOl, elementLi) {
+    elementOl.forEach(function (li) {
+      li.classList.remove('active');
+    });
+    elementLi.classList.add('active');
+  }
+  main.append(h2, currentContent);
+  elements.navDiv = navDiv;
+  elements.aside = aside;
+  elements.main = main;
+  return elements;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-input.js":
+/*!*********************************************************!*\
+  !*** ./src/components/front-books/js/f-create-input.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createInput: () => (/* binding */ createInput)
+/* harmony export */ });
+/* harmony import */ var _data_data_books_base_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/data-books-base.js */ "./src/components/front-books/js/data/data-books-base.js");
+/* harmony import */ var _data_data_books_base_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/data-books-base-en.js */ "./src/components/front-books/js/data/data-books-base-en.js");
+/* harmony import */ var _data_data_books_htmlcss_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data/data-books-htmlcss.js */ "./src/components/front-books/js/data/data-books-htmlcss.js");
+/* harmony import */ var _data_data_books_htmlcss_en_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/data-books-htmlcss-en.js */ "./src/components/front-books/js/data/data-books-htmlcss-en.js");
+/* harmony import */ var _data_data_books_bootstrap_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/data-books-bootstrap.js */ "./src/components/front-books/js/data/data-books-bootstrap.js");
+/* harmony import */ var _data_data_books_bootstrap_en_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data/data-books-bootstrap-en.js */ "./src/components/front-books/js/data/data-books-bootstrap-en.js");
+/* harmony import */ var _data_data_books_js_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data/data-books-js.js */ "./src/components/front-books/js/data/data-books-js.js");
+/* harmony import */ var _data_data_books_js_en_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./data/data-books-js-en.js */ "./src/components/front-books/js/data/data-books-js-en.js");
+/* harmony import */ var _data_data_books_jquery_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./data/data-books-jquery.js */ "./src/components/front-books/js/data/data-books-jquery.js");
+/* harmony import */ var _data_data_books_jquery_en_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./data/data-books-jquery-en.js */ "./src/components/front-books/js/data/data-books-jquery-en.js");
+/* harmony import */ var _data_data_books_ts_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./data/data-books-ts.js */ "./src/components/front-books/js/data/data-books-ts.js");
+/* harmony import */ var _data_data_books_ts_en_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./data/data-books-ts-en.js */ "./src/components/front-books/js/data/data-books-ts-en.js");
+/* harmony import */ var _data_data_books_angular_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./data/data-books-angular.js */ "./src/components/front-books/js/data/data-books-angular.js");
+/* harmony import */ var _data_data_books_angular_en_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./data/data-books-angular-en.js */ "./src/components/front-books/js/data/data-books-angular-en.js");
+/* harmony import */ var _data_data_books_react_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./data/data-books-react.js */ "./src/components/front-books/js/data/data-books-react.js");
+/* harmony import */ var _data_data_books_react_en_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./data/data-books-react-en.js */ "./src/components/front-books/js/data/data-books-react-en.js");
+/* harmony import */ var _data_data_books_vue_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./data/data-books-vue.js */ "./src/components/front-books/js/data/data-books-vue.js");
+/* harmony import */ var _data_data_books_vue_en_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./data/data-books-vue-en.js */ "./src/components/front-books/js/data/data-books-vue-en.js");
+/* harmony import */ var _data_data_books_node_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./data/data-books-node.js */ "./src/components/front-books/js/data/data-books-node.js");
+/* harmony import */ var _data_data_books_node_en_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./data/data-books-node-en.js */ "./src/components/front-books/js/data/data-books-node-en.js");
+/* harmony import */ var _data_data_books_web_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./data/data-books-web.js */ "./src/components/front-books/js/data/data-books-web.js");
+/* harmony import */ var _data_data_books_web_en_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./data/data-books-web-en.js */ "./src/components/front-books/js/data/data-books-web-en.js");
+/* harmony import */ var _data_data_books_php_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./data/data-books-php.js */ "./src/components/front-books/js/data/data-books-php.js");
+/* harmony import */ var _data_data_books_php_en_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./data/data-books-php-en.js */ "./src/components/front-books/js/data/data-books-php-en.js");
+/* harmony import */ var _data_data_books_python_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./data/data-books-python.js */ "./src/components/front-books/js/data/data-books-python.js");
+/* harmony import */ var _data_data_books_python_en_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./data/data-books-python-en.js */ "./src/components/front-books/js/data/data-books-python-en.js");
+var _ref;
+/*****************
+Функция createInput создает inputArray
+*****************/
+
+//1. Импортируем массивы из файлов data-books.js...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//2. Создаем массив dataArray для импортированных массивов
+var dataArray = [_data_data_books_base_js__WEBPACK_IMPORTED_MODULE_0__.dataBooksBase, _data_data_books_base_en_js__WEBPACK_IMPORTED_MODULE_1__.dataBooksBaseEn, _data_data_books_htmlcss_js__WEBPACK_IMPORTED_MODULE_2__.dataBooksHtmlcss, _data_data_books_htmlcss_en_js__WEBPACK_IMPORTED_MODULE_3__.dataBooksHtmlcssEn, _data_data_books_bootstrap_js__WEBPACK_IMPORTED_MODULE_4__.dataBooksBootstrap, _data_data_books_bootstrap_en_js__WEBPACK_IMPORTED_MODULE_5__.dataBooksBootstrapEn, _data_data_books_js_js__WEBPACK_IMPORTED_MODULE_6__.dataBooksJs, _data_data_books_js_en_js__WEBPACK_IMPORTED_MODULE_7__.dataBooksJsEn, _data_data_books_jquery_js__WEBPACK_IMPORTED_MODULE_8__.dataBooksJquery, _data_data_books_jquery_en_js__WEBPACK_IMPORTED_MODULE_9__.dataBooksJqueryEn, _data_data_books_ts_js__WEBPACK_IMPORTED_MODULE_10__.dataBooksTs, _data_data_books_ts_en_js__WEBPACK_IMPORTED_MODULE_11__.dataBooksTsEn, _data_data_books_angular_js__WEBPACK_IMPORTED_MODULE_12__.dataBooksAngular, _data_data_books_angular_en_js__WEBPACK_IMPORTED_MODULE_13__.dataBooksAngularEn, _data_data_books_react_js__WEBPACK_IMPORTED_MODULE_14__.dataBooksReact, _data_data_books_react_en_js__WEBPACK_IMPORTED_MODULE_15__.dataBooksReactEn, _data_data_books_vue_js__WEBPACK_IMPORTED_MODULE_16__.dataBooksVue, _data_data_books_vue_en_js__WEBPACK_IMPORTED_MODULE_17__.dataBooksVueEn, _data_data_books_node_js__WEBPACK_IMPORTED_MODULE_18__.dataBooksNode, _data_data_books_node_en_js__WEBPACK_IMPORTED_MODULE_19__.dataBooksNodeEn, _data_data_books_web_js__WEBPACK_IMPORTED_MODULE_20__.dataBooksWeb, _data_data_books_web_en_js__WEBPACK_IMPORTED_MODULE_21__.dataBooksWebEn, _data_data_books_php_js__WEBPACK_IMPORTED_MODULE_22__.dataBooksPhp, _data_data_books_php_en_js__WEBPACK_IMPORTED_MODULE_23__.dataBooksPhpEn, _data_data_books_python_js__WEBPACK_IMPORTED_MODULE_24__.dataBooksPython, _data_data_books_python_en_js__WEBPACK_IMPORTED_MODULE_25__.dataBooksPythonEn];
+
+//3. Создаем массив с книгами dataBooks из массива dataArray
+var dataBooks = (_ref = []).concat.apply(_ref, dataArray);
+function createInput() {
+  return dataBooks;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-learned-list.js":
+/*!****************************************************************!*\
+  !*** ./src/components/front-books/js/f-create-learned-list.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createLearnedList: () => (/* binding */ createLearnedList)
+/* harmony export */ });
+/*****************
+Функция createLearnedList возвращает список элементов li с прочитанными книгами для элемента Learned меню
+*****************/
+/*
+Алгоритм работы
+1. Функция createLearnedList принимает массив прочитанных книг
+2. Отсортируем книги по дате прочтения
+3. Создаем массив parentDiv для элементов li списка
+4. Создадим элемент elementLi списка книг
+5. Добавим элемент elementLi в массив parentDiv для элементов li списка
+*/
+
+//1. Функция createLearnedList принимает массив прочитанных книг
+function createLearnedList(data) {
+  //2. Отсортируем книги по дате прочтения
+  data.sort(function (a, b) {
+    //удалить всё, кроме цифр
+    return a.dateLearned.replace(/[^0-9]/gi, '') - b.dateLearned.replace(/[^0-9]/gi, '');
+  });
+
+  //3. Создаем массив parentDiv для элементов li списка
+  var parentDiv = [];
+  var _loop = function _loop(i) {
+    //4. Создадим элемент elementLi списка книг
+    var elementLi = document.createElement('li');
+    elementLi.addEventListener('mouseover', addColor);
+    elementLi.addEventListener('mouseout', removeColor);
+    elementLi.innerHTML = "\n    <span>".concat(data[i].dateLearned, "</span>\n    <div><strong>[").concat(data[i].year, "] ").concat(data[i].title, "</strong></div>\n    <div><em>").concat(data[i].author, "</em></div>\n    <div>").concat(data[i].pages, " \u0441\u0442\u0440</div>\n    <div>\u0418\u0437\u0443\u0447\u0435\u043D\u043E ").concat(data[i].isLearned, "</div>\n    <div>").concat(origin(data[i]), "</div>");
+
+    //5. Добавим элемент elementLi в массив parentDiv для элементов li списка
+    parentDiv.push(elementLi);
+    function origin(book) {
+      if (book.origin) {
+        return "(\n        <strong>".concat(book.origin.title, "</strong>\n        - <em>").concat(book.origin.author, "</em>\n        )");
+      } else {
+        return '';
+      }
+    }
+    function addColor() {
+      elementLi.classList.add('over');
+    }
+    function removeColor() {
+      elementLi.classList.remove('over');
+    }
+  };
+  for (var i = 0; i < data.length; i++) {
+    _loop(i);
+  }
+  return parentDiv;
+}
+
+/***/ }),
+
+/***/ "./src/components/front-books/js/f-create-list.js":
+/*!********************************************************!*\
+  !*** ./src/components/front-books/js/f-create-list.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createList: () => (/* binding */ createList)
+/* harmony export */ });
+/* harmony import */ var _sort_books_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sort-books.js */ "./src/components/front-books/js/sort-books.js");
+/*****************
+Функция createList возвращает список элементов li с книгами для элемента aside меню
+*****************/
+/*
+Алгоритм работы
+1. Функция createList принимает массив книг по одной теме
+2. Отсортируем книги по году, автору и названию
+3. Создаем массив parentDiv для элементов li списка
+4. Создадим элемент elementLi списка книг
+5. Добавим элемент elementLi в массив parentDiv для элементов li списка
+*/
+
+
+
+//1. Функция createList принимает массив книг по одной теме
+function createList(data) {
+  //2. Отсортируем книги по году, автору и названию
+  data = (0,_sort_books_js__WEBPACK_IMPORTED_MODULE_0__.sortBooks)(data);
+
+  //3. Создаем массив parentDiv для элементов li списка
+  var parentDiv = [];
+  var _loop = function _loop(i) {
+    //4. Создадим элемент elementLi списка книг
+    var elementLi = document.createElement('li');
+    elementLi.addEventListener('mouseover', addColor);
+    elementLi.addEventListener('mouseout', removeColor);
+    elementLi.innerHTML = "\n    <strong>[".concat(data[i].year, "] ").concat(data[i].title, "</strong>\n    <div><em>").concat(data[i].author, "</em></div>\n    <div>").concat(data[i].pages, " \u0441\u0442\u0440</div>\n    <div>\u0418\u0437\u0443\u0447\u0435\u043D\u043E ").concat(data[i].isLearned, "</div>\n    <div>").concat(origin(data[i]), "</div>");
+
+    //5. Добавим элемент elementLi в массив parentDiv для элементов li списка
+    parentDiv.push(elementLi);
+    function origin(book) {
+      if (book.origin) {
+        return "(\n        <strong>".concat(book.origin.title, "</strong>\n        - <em>").concat(book.origin.author, "</em>\n        )");
+      } else {
+        return '';
+      }
+    }
+    function addColor() {
+      elementLi.classList.add('over');
+    }
+    function removeColor() {
+      elementLi.classList.remove('over');
+    }
+  };
+  for (var i = 0; i < data.length; i++) {
+    _loop(i);
+  }
+  return parentDiv;
 }
 
 /***/ }),
@@ -7623,7 +7920,7 @@ if (currentPage) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "sortBooks": () => (/* binding */ sortBooks)
+/* harmony export */   sortBooks: () => (/* binding */ sortBooks)
 /* harmony export */ });
 /*****************
 Функция sortBooks сортирует книги по году, автору и названию
@@ -7651,15 +7948,15 @@ function sortBooks(books) {
 
 /***/ }),
 
-/***/ "./src/components/header/header.js":
-/*!*****************************************!*\
-  !*** ./src/components/header/header.js ***!
-  \*****************************************/
+/***/ "./src/components/header/element-header.js":
+/*!*************************************************!*\
+  !*** ./src/components/header/element-header.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_header.scss */ "./src/components/header/_header.scss");
+/* harmony import */ var _element_header_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./element-header.html */ "./src/components/header/element-header.html");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -7687,7 +7984,7 @@ var Header = /*#__PURE__*/function (_HTMLElement) {
   _createClass(Header, [{
     key: "connectedCallback",
     value: function connectedCallback() {
-      this.innerHTML = "\n    <header class=\"header container\" id=\"header\">\n      <div class=\"header__first-row\">\n        <div class=\"header__logo\">frontend200tb</div>\n        <div class=\"header__logo\">frontend</div>\n      </div>\n    </header>    \n    ";
+      this.innerHTML = _element_header_html__WEBPACK_IMPORTED_MODULE_0__["default"];
     }
   }]);
   return Header;
@@ -7696,10 +7993,43 @@ customElements.define('header-component', Header);
 
 /***/ }),
 
-/***/ "./src/components/footer/_footer.scss":
-/*!********************************************!*\
-  !*** ./src/components/footer/_footer.scss ***!
-  \********************************************/
+/***/ "./src/components/header/header.js":
+/*!*****************************************!*\
+  !*** ./src/components/header/header.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
+/* harmony import */ var _element_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./element-header */ "./src/components/header/element-header.js");
+
+
+
+/***/ }),
+
+/***/ "./src/components/header/element-header.html":
+/*!***************************************************!*\
+  !*** ./src/components/header/element-header.html ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = "<header class=\"header container\" id=\"header\">\r\n  <div class=\"header__first-row\">\r\n    <div class=\"header__logo\">\r\n      <a href=\"https://github.com/frontend200tb\" target=\"_blank\">frontend200tb</a>\r\n    </div>\r\n    <div class=\"header__logo\">\r\n      <a href=\"https://frontend200tb.github.io/200tb/\" target=\"_blank\">frontend</a>\r\n    </div>\r\n  </div>\r\n</header>    ";
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/components/footer/footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/footer/footer.scss ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7709,10 +8039,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/header/_header.scss":
-/*!********************************************!*\
-  !*** ./src/components/header/_header.scss ***!
-  \********************************************/
+/***/ "./src/components/header/header.scss":
+/*!*******************************************!*\
+  !*** ./src/components/header/header.scss ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7813,12 +8143,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
 /* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header/header */ "./src/components/header/header.js");
-/* harmony import */ var _components_front_books_js_front_books__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/front-books/js/front-books */ "./src/components/front-books/js/front-books.js");
-/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer/footer */ "./src/components/footer/footer.js");
+/* harmony import */ var _components_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/footer/footer */ "./src/components/footer/footer.js");
+/* harmony import */ var _components_front_books_front_books__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/front-books/front-books */ "./src/components/front-books/front-books.js");
 
 
 
 
+(0,_components_front_books_front_books__WEBPACK_IMPORTED_MODULE_3__.showFrontBooks)();
 })();
 
 /******/ })()
