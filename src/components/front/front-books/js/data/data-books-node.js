@@ -1,0 +1,167 @@
+const dataBooksNode = [
+
+  {
+    id: 1,
+    year: 2012,
+    category: 'framework',
+    theme: 'node',
+    title: 'Node.js. Разработка серверных веб-приложений на JavaScript',
+    author: 'Хэррон',
+    authorName: 'Дэвид',
+    pages: '146',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 2,
+    year: 2015,
+    category: 'framework',
+    theme: 'node',
+    title: 'Node.js. Путеводитель по технологии',
+    author: 'Сухов',
+    authorName: 'Кирилл',
+    pages: '420',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 3,
+    year: 2017,
+    category: 'framework',
+    theme: 'node',
+    title: 'Учусь node.js',
+    author: 'stackoverflow',
+    pages: '441',
+    isLearned: false,
+    dateLearned: '',
+    origin: {
+      year: 2017,
+      title: 'Learning Node.js',
+      author: 'stackoverflow',
+    },
+  },
+
+  {
+    id: 4,
+    year: 2017,
+    category: 'framework',
+    theme: 'node',
+    title: 'Учусь node.js (eng)',
+    author: 'stackoverflow',
+    pages: '441',
+    isLearned: false,
+    dateLearned: '',
+    origin: {
+      year: 2017,
+      title: 'Learning Node.js',
+      author: 'stackoverflow',
+    },
+  },
+
+  {
+    id: 5,
+    year: 2017,
+    category: 'framework',
+    theme: 'node',
+    title: 'Веб разработка Node и Express',
+    author: 'Браун',
+    authorName: 'Итан',
+    pages: '336',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 6,
+    year: 2017,
+    category: 'framework',
+    theme: 'node',
+    title: 'Шаблоны проектирования Node.JS (2-е изд)',
+    author: 'Каскиаро',
+    authorName: 'Марио',
+    pages: '397',
+    isLearned: false,
+    dateLearned: '',
+    origin: {
+      year: 2016,
+      title: 'Node.js Design Patterns',
+      author: 'Mario Casciaro',
+    },
+  },
+
+  {
+    id: 8,
+    year: 2017,
+    category: 'framework',
+    theme: 'node',
+    title: 'Изучаем Node (2-е изд)',
+    author: 'Пауэрс',
+    authorName: 'Шелли',
+    pages: '304',
+    isLearned: false,
+    dateLearned: '',
+    origin: {
+      year: 2016,
+      title: 'Learning Node (2nd)',
+      author: 'Shelley Powers',
+    },
+  },
+
+  {
+    id: 10,
+    year: 2018,
+    category: 'framework',
+    theme: 'node',
+    title: 'Руководство по Node.js',
+    author: 'ruvds',
+    pages: '121',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 11,
+    year: 2018,
+    category: 'framework',
+    theme: 'node',
+    title: 'Node.JS в действии (2-е изд)',
+    author: 'Кантелон',
+    authorName: 'Майк',
+    pages: '432',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 12,
+    year: 2021,
+    category: 'framework',
+    theme: 'node',
+    title: 'Веб разработка с применением Node и Express (2-е изд)',
+    author: 'Браун',
+    authorName: 'Итан',
+    pages: '336',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 13,
+    year: 2023,
+    category: 'framework',
+    theme: 'node',
+    title: 'Основы разработки на node.js',
+    author: 'Государев',
+    authorName: 'Илья',
+    pages: '179',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {},
+
+];
+
+export default dataBooksNode;

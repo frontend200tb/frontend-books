@@ -1,0 +1,79 @@
+Проект 200tb
+Сейчас это одна страница. надо сделать SPA и маршрутизацию. 
+На каждую страну свою страницу, а меню выбора стран на всех страницах
+
+Структура страниц
+0 div class="page" id="page"
+1 header-component
+|-- header class="header container" id="header"
+  |-- 1.1 header-first-row
+    |-- div class="header__first-row"
+      |-- 1.1.1 div class="header__logo"
+      |-- 1.1.2 div class="header__nav" id="header__nav"
+        |--news
+        |--lang
+        |--bench
+        |--frontend
+  |--1.2 header-second-row
+    |-- div class="header__second-row"
+      |--1.2.1 social-icons
+        |-- div class="social" id="social"
+      |--1.2.2 settings-component
+        |-- div class="settings" id="settings"
+          |--1.2.2.1 set-btn
+            |-- div class="set-btn" id="set-btn"
+          |--1.2.2.2 div class="set-section"
+            |-- set-color
+              | div class="set-color" id="set-color"
+            |-- set-view
+              |-- div class="set-view"
+                |-- theme-btn
+                  |-- div class="theme-btn" id="theme-btn"
+                |-- snow-btn
+                  |-- div class="snow-btn" id="snow-btn"
+                |-- search-btn
+                  |-- div class="search-btn" id="search-btn"
+2 search-form
+|-- 2.1 div class="search-google container" id="search-google"
+  |-- 2.1.1 form
+    |-- input type="text"
+    |-- input type="submit"
+    |-- input type="reset"
+3 nav class="nav container" (зависит от выбора в меню header__nav)
+4 main class="main container" id="main" (зависит от выбора в меню nav)
+|-- 4.1 компонент страницы (может быть трех типов, пример смотри ниже)
+5 footer-component
+
+4.1 news-main (тип 1)
+|-- div class="news-main" id="news-main"
+  |-- 4.1.1 h1
+  |-- 4.1.2 section class="columns" id="news"
+        |-- 4.1.2.1 div class="columns__item"
+        |-- 4.1.2.2 div class="columns__item"
+        |-- 4.1.2.3 div class="columns__item"
+
+4.2 front-code (тип 2)
+|-- div class="front-code" id="front-code"
+  |-- 4.2.1 h1
+  |-- 4.2.2 section class="main__aside"
+    |-- 4.2.2.1 aside class="aside"
+    |-- 4.2.2.2 main class="content" id="code"
+      |-- компонент контента (зависит от выбора в меню aside)
+
+4.3 front-video (тип 3)
+|-- div class="front-video" id="front-video"
+  |-- 4.3.1 nav class="nav container" id="main-nav"
+  |-- 4.3.2 h1
+  |-- 4.3.3 section class="main__aside"
+    |-- 4.3.3.1 aside class="aside"
+    |-- 4.2.2.2 main class="content video"
+      |-- контент (зависит от выбора в меню aside)
+
+Установлены 
+webpack webpack-cli html-webpack-plugin webpack-dev-server
+sass-loader sass css-loader mini-css-extract-plugin
+postcss-loader postcss postcss-preset-env
+pug-loader pug
+filemanager-webpack-plugin
+babel-loader @babel/core @babel/preset-env
+ts-loader typescript
