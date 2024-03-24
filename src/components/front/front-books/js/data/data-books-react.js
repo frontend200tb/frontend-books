@@ -1,0 +1,175 @@
+const dataBooksReact = [
+
+  {
+    id: 1,
+    year: 2017,
+    category: 'framework',
+    theme: 'react',
+    title: 'React.js. Быстрый старт (1е)',
+    author: 'Стоян Стефанов',
+    pages: '304',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 2,
+    year: 2018,
+    category: 'framework',
+    theme: 'react',
+    title: 'React и Redux',
+    author: 'Алекс Бэнкс',
+    pages: '336',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 3,
+    year: 2018,
+    category: 'framework',
+    theme: 'react',
+    title: 'React.js для начинающих (2е)',
+    author: 'Пацианский',
+    pages: '147',
+    isLearned: true,
+    dateLearned: '2022-07-27 ср',
+  },
+
+  {
+    id: 4,
+    year: 2018,
+    category: 'framework',
+    theme: 'react',
+    title: 'Основы Redux',
+    author: 'Пацианский',
+    pages: '102',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 5,
+    year: 2018,
+    category: 'framework',
+    theme: 'react',
+    title: 'Путь к изучению React',
+    author: 'Робин Верух',
+    pages: '231',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 6,
+    year: 2018,
+    category: 'framework',
+    theme: 'react',
+    title: 'Путь к изучению React (eng)',
+    author: 'Робин Верух',
+    pages: '231',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 7,
+    year: 2019,
+    category: 'framework',
+    theme: 'react',
+    title: 'React быстро',
+    author: 'Азат Мардан',
+    pages: '560',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 8,
+    year: 2019,
+    category: 'framework',
+    theme: 'react',
+    title: 'React быстро (eng)',
+    author: 'Азат Мардан',
+    pages: '560',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 9,
+    year: 2019,
+    category: 'framework',
+    theme: 'react',
+    title: 'Учебный курс по React',
+    author: 'Боб Зиролл',
+    pages: '278',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 10,
+    year: 2019,
+    category: 'framework',
+    theme: 'react',
+    title: 'Изучаем React (2е)',
+    author: 'Кирупа Чиннатамби',
+    pages: '368',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 12,
+    year: 2022,
+    category: 'framework',
+    theme: 'react',
+    title: 'React. Современные шаблоны для разработки приложений (2е)',
+    author: 'Алекс Бэнкс',
+    pages: '320',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 13,
+    year: 2019,
+    category: 'framework',
+    theme: 'react',
+    title: 'React в действии',
+    author: 'Марк Томас',
+    pages: '368',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 12,
+    year: 2023,
+    category: 'framework',
+    theme: 'react',
+    title: 'React. Сборник рецептов',
+    author: 'Гриффитс',
+    pages: '530',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 13,
+    year: 2023,
+    category: 'framework',
+    theme: 'react',
+    title: 'React. Быстрый старт (2е)',
+    author: 'Стоян Стефанов',
+    pages: '304',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {},
+
+];
+
+export default dataBooksReact;

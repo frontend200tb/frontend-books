@@ -1,0 +1,157 @@
+const dataBooksBios = [
+
+  {
+    id: 1,
+    year: 2002,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Секреты BIOS',
+    author: 'Трасковский',
+    authorName: 'Антон',
+    pages: '393',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 2,
+    year: 2004,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Настройка BIOS',
+    author: 'Белунцов',
+    pages: '404',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 3,
+    year: 2005,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Секреты BIOS',
+    author: 'Белунцов',
+    pages: '336',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 4,
+    year: 2005,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Настройки BIOS',
+    author: 'Дмитриев',
+    pages: '284',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 5,
+    year: 2006,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'BIOS. Оптимизация и разгон компьютера',
+    author: 'Карпов',
+    authorName: 'Борис',
+    pages: '177',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 6,
+    year: 2006,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'BIOS Setup',
+    author: 'Михлин',
+    authorName: 'Евгений',
+    pages: '241',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 7,
+    year: 2007,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Настройки BIOS (3е)',
+    author: 'Дмитриев',
+    pages: '289',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 8,
+    year: 2007,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Bios и тонкая настройка ПК',
+    author: 'Донцов',
+    pages: '79',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 9,
+    year: 2008,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Bios',
+    author: 'Салихан',
+    authorName: 'Дармаван',
+    pages: '763',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 10,
+    year: 2009,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'BIOS на 100%',
+    author: 'Зозуля',
+    authorName: 'Юрий',
+    pages: '336',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 11,
+    year: 2010,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'Справочник по параметрам BIOS',
+    author: 'Вонг',
+    authorName: 'Адриан',
+    pages: '149',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {
+    id: 12,
+    year: 2013,
+    category: 'основы',
+    theme: 'Bios',
+    title: 'BIOS. Настройки (5е)',
+    author: 'Дмитриев',
+    pages: '314',
+    isLearned: false,
+    dateLearned: '',
+  },
+
+  {},
+
+];
+
+export default dataBooksBios;
